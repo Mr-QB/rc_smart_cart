@@ -142,7 +142,7 @@ class _LoginPageState extends State<LoginPage> with TickerProviderStateMixin {
           context,
           MaterialPageRoute(
             builder: (context) => OtpPage(
-              phoneNumber: '+84 ${phoneController.text}',
+              phoneNumber: '${phoneController.text}',
             ),
           ),
         );
@@ -344,9 +344,9 @@ class _LoginPageState extends State<LoginPage> with TickerProviderStateMixin {
                             ],
                             validator: (value) {
                               if (value == null || value.isEmpty) {
-                                return 'Vui lòng nhập số điện thoại';
-                              } else if (value.length < 9) {
-                                return 'Số điện thoại không hợp lệ';
+                                return 'Please enter phone number';
+                              } else if (value.length < 9 || value[0] != '0') {
+                                return 'Phone number must start with 0 and be 10 digits long';
                               }
                               return null;
                             },

@@ -1,5 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'dart:async';
+import 'dart:convert';
+import 'package:http/http.dart' as http;
+
+import 'package:rc_smart_cart_app/core/constants/api_constants.dart';
+import 'package:rc_smart_cart_app/features/home/home.dart';
 
 class OtpPage extends StatefulWidget {
   final String phoneNumber;
@@ -19,6 +25,10 @@ class _OtpPageState extends State<OtpPage> {
     6,
     (index) => FocusNode(),
   );
+  bool _canResend = true;
+  bool _isLoading = false;
+  int _timeLeft = 60;
+  Timer? _timer;
 
   @override
   void dispose() {
@@ -31,17 +41,113 @@ class _OtpPageState extends State<OtpPage> {
     super.dispose();
   }
 
-  void _onOtpSubmit() {
-    String otp = _controllers.map((controller) => controller.text).join();
-    if (otp.length == 6) {
+  @override
+  void initState() {
+    super.initState();
+    WidgetsBinding.instance.addPostFrameCallback((_) {
+      _sendOtpRequest();
+    });
+  }
+
+  Future<void> _sendOtpRequest() async {
+    if (_isLoading) return;
+
+    setState(() {
+      _isLoading = true;
+    });
+
+    try {
+      final success = await OtpService.sendOtp(widget.phoneNumber);
+
+      if (success) {
+        _startCountdown();
+        ScaffoldMessenger.of(context).showSnackBar(
+          const SnackBar(
+            content: Text('OTP sent successfully'),
+            backgroundColor: Colors.green,
+            behavior: SnackBarBehavior.floating,
+          ),
+        );
+      } else {
+        throw Exception('Failed to send OTP');
+      }
+    } catch (e) {
       ScaffoldMessenger.of(context).showSnackBar(
-        const SnackBar(
-          content: Text('Verifying OTP...'),
-          backgroundColor: Colors.black87,
+        SnackBar(
+          content: Text('Error: ${e.toString()}'),
+          backgroundColor: Colors.red,
           behavior: SnackBarBehavior.floating,
         ),
       );
+    } finally {
+      setState(() {
+        _isLoading = false;
+      });
     }
+  }
+
+  Future<void> _onOtpSubmit() async {
+    String otp = _controllers.map((controller) => controller.text).join();
+    if (otp.length != 6) return;
+
+    setState(() {
+      _isLoading = true;
+    });
+
+    try {
+      final success = await OtpService.verifyOtp(widget.phoneNumber, otp);
+
+      if (success) {
+        ScaffoldMessenger.of(context).showSnackBar(
+          const SnackBar(
+            content: Text('OTP verified successfully'),
+            backgroundColor: Colors.green,
+            behavior: SnackBarBehavior.floating,
+          ),
+        );
+        if (mounted) {
+          Navigator.pushReplacement(
+            context,
+            MaterialPageRoute(
+              builder: (context) => const HomePage(),
+            ),
+          );
+        }
+        // TODO: Navigate to next screen or handle successful verification
+      } else {
+        throw Exception('Invalid OTP');
+      }
+    } catch (e) {
+      ScaffoldMessenger.of(context).showSnackBar(
+        SnackBar(
+          content: Text('Error: ${e.toString()}'),
+          backgroundColor: Colors.red,
+          behavior: SnackBarBehavior.floating,
+        ),
+      );
+    } finally {
+      setState(() {
+        _isLoading = false;
+      });
+    }
+  }
+
+  void _startCountdown() {
+    setState(() {
+      _canResend = false;
+      _timeLeft = 60;
+    });
+
+    _timer = Timer.periodic(const Duration(seconds: 1), (timer) {
+      setState(() {
+        if (_timeLeft > 0) {
+          _timeLeft--;
+        } else {
+          _canResend = true;
+          timer.cancel();
+        }
+      });
+    });
   }
 
   @override
@@ -161,17 +267,28 @@ class _OtpPageState extends State<OtpPage> {
               const Spacer(),
               Center(
                 child: TextButton(
-                  onPressed: () {
-                    // Add resend OTP logic here
-                  },
-                  child: const Text(
-                    'Resend Code',
-                    style: TextStyle(
-                      color: Colors.black,
-                      fontSize: 16,
-                      fontWeight: FontWeight.w500,
-                    ),
-                  ),
+                  onPressed:
+                      (_canResend && !_isLoading) ? _sendOtpRequest : null,
+                  child: _isLoading
+                      ? const SizedBox(
+                          width: 20,
+                          height: 20,
+                          child: CircularProgressIndicator(
+                            strokeWidth: 2,
+                            valueColor:
+                                AlwaysStoppedAnimation<Color>(Colors.black),
+                          ),
+                        )
+                      : Text(
+                          _canResend
+                              ? 'Resend Code'
+                              : 'Resend Code (${_timeLeft}s)',
+                          style: TextStyle(
+                            color: _canResend ? Colors.black : Colors.grey,
+                            fontSize: 16,
+                            fontWeight: FontWeight.w500,
+                          ),
+                        ),
                 ),
               ),
               const SizedBox(height: 20),
@@ -180,5 +297,48 @@ class _OtpPageState extends State<OtpPage> {
         ),
       ),
     );
+  }
+}
+
+class OtpService {
+  static Future<bool> sendOtp(String phoneNumber) async {
+    try {
+      final response = await http.post(
+        Uri.parse('http://${ApiConstants.send_otp_endpoint}'),
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: jsonEncode({
+          'phone_number': phoneNumber,
+        }),
+      );
+
+      final Map<String, dynamic> data = jsonDecode(response.body);
+      return data['success'] ?? false;
+    } catch (e) {
+      print('Error sending OTP: $e');
+      return false;
+    }
+  }
+
+  static Future<bool> verifyOtp(String phoneNumber, String otp) async {
+    try {
+      final response = await http.post(
+        Uri.parse('http://${ApiConstants.verifyOtpEndpoint}'),
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: jsonEncode({
+          'phone_number': phoneNumber,
+          'otp': otp,
+        }),
+      );
+
+      final Map<String, dynamic> data = jsonDecode(response.body);
+      return data['success'] ?? false;
+    } catch (e) {
+      print('Error verifying OTP: $e');
+      return false;
+    }
   }
 }
