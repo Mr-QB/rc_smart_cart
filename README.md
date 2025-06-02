@@ -1,16 +1,36 @@
-# rc_smart_cart_app
+# RC Smart Cart – Intelligent Shopping Cart Robot  
+### Team: Chap Het – FPT IoT Challenge 2025
 
-A new Flutter project.
+**RC Smart Cart** is an autonomous shopping cart robot developed to enhance the shopping experience in supermarkets. The robot is capable of following users, navigating indoor environments, identifying and tracking products, and automatically handling billing when items are placed into the cart. The project integrates advanced technologies in computer vision, navigation, and automation.
 
-## Getting Started
+## Project Objectives
 
-This project is a starting point for a Flutter application.
+- Assist users during shopping with a self-driving robot cart.
+- Navigate and guide users to specific store sections using indoor localization.
+- Automatically detect products placed in the cart in real-time.
+- Handle billing automatically and support contactless payments.
 
-A few resources to get you started if this is your first Flutter project:
+## Key Features
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+- Navigation and user-following powered by ORB-SLAM technology.
+- Real-time indoor mapping and guidance to desired aisles or product zones.
+- Automatic item recognition and cart inventory tracking.
+- Billing and invoice management via mobile application.
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+
+## Main Branches
+
+| Branch Name                       | Description                                                |
+|-----------------------------------|------------------------------------------------------------|
+| rc_smart_cart_app                 | Flutter app for user interface and cart status monitoring  |
+| rc_smart_cart_backend_server      | Python backend handling data, product tracking, and control|
+
+## Development Status
+
+The project is currently under active development, focusing on key modules such as indoor navigation, device communication, and mobile interface. Integration and real-world testing are planned in upcoming phases.
+
+## Contact
+
+For more information or collaboration, please contact **Team Chap Het**, participating in the **FPT IoT Challenge 2025**.
+
+Our representative email qbao1607@gmail.com
