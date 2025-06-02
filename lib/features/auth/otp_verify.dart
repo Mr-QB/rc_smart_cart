@@ -5,7 +5,7 @@ import 'dart:convert';
 import 'package:http/http.dart' as http;
 
 import 'package:rc_smart_cart_app/core/constants/api_constants.dart';
-import 'package:rc_smart_cart_app/features/home/home.dart';
+import 'package:rc_smart_cart_app/features/home/main_page.dart';
 
 class OtpPage extends StatefulWidget {
   final String phoneNumber;
@@ -109,7 +109,7 @@ class _OtpPageState extends State<OtpPage> {
           Navigator.pushReplacement(
             context,
             MaterialPageRoute(
-              builder: (context) => const HomePage(),
+              builder: (context) => const MainPage(),
             ),
           );
         }
