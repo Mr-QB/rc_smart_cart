@@ -2,6 +2,7 @@ from flask import Flask
 from flask_cors import CORS
 from .routes.auth_service import auth_bp
 
+
 app = Flask(__name__)
 CORS(app)
 
