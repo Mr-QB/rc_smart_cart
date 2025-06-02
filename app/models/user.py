@@ -1,1 +1,0 @@
-# Định nghĩa schema/data model
