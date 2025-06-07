@@ -1,103 +1,161 @@
 import 'package:flutter/material.dart';
-import 'package:animated_notch_bottom_bar/animated_notch_bottom_bar/animated_notch_bottom_bar.dart';
 import 'package:rc_smart_cart_app/features/home/home_page.dart';
-import 'package:rc_smart_cart_app/features/home/battery_page.dart';
-import 'package:rc_smart_cart_app/features/home/connectivity_page.dart';
+import 'package:rc_smart_cart_app/features/home/subpage/shopping_cart_page.dart';
+import 'package:rc_smart_cart_app/themes/light_color.dart';
+import 'package:rc_smart_cart_app/themes/theme.dart';
+import 'package:rc_smart_cart_app/widgets/BottomNavigationBar/bottom_navigation_bar.dart';
+import 'package:rc_smart_cart_app/widgets/title_text.dart';
+import 'package:rc_smart_cart_app/widgets/extentions.dart';
 
 class MainPage extends StatefulWidget {
-  const MainPage({super.key});
+  const MainPage({super.key, this.title});
+
+  final String? title;
 
   @override
-  State<MainPage> createState() => _MainPageState();
+  _MainPageState createState() => _MainPageState();
 }
 
 class _MainPageState extends State<MainPage> {
-  final PageController _pageController = PageController(initialPage: 0);
-  final NotchBottomBarController _controller =
-      NotchBottomBarController(index: 0);
+  bool isHomePageSelected = true;
+  Widget _appBar() {
+    return Container(
+      padding: AppTheme.padding,
+      child: Row(
+        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+        children: <Widget>[
+          RotatedBox(
+            quarterTurns: 4,
+            child: _icon(Icons.sort, color: Colors.black54),
+          ),
+          ClipRRect(
+            borderRadius: BorderRadius.all(Radius.circular(13)),
+            child: Container(
+              decoration: BoxDecoration(
+                color: Theme.of(context).scaffoldBackgroundColor,
+                boxShadow: <BoxShadow>[
+                  BoxShadow(
+                    color: Color(0xfff8f8f8),
+                    blurRadius: 10,
+                    spreadRadius: 10,
+                  ),
+                ],
+              ),
+              child: Image.asset("assets/user.png"),
+            ),
+          ).ripple(() {}, borderRadius: BorderRadius.all(Radius.circular(13))),
+        ],
+      ),
+    );
+  }
 
-  final List<Widget> _pages = const [
-    HomePage(),
-    BatteryPage(),
-    ConnectivityPage(),
-  ];
+  Widget _icon(IconData icon, {Color color = LightColor.iconColor}) {
+    return Container(
+      padding: EdgeInsets.all(10),
+      decoration: BoxDecoration(
+        borderRadius: BorderRadius.all(Radius.circular(13)),
+        color: Theme.of(context).scaffoldBackgroundColor,
+        boxShadow: AppTheme.shadow,
+      ),
+      child: Icon(icon, color: color),
+    ).ripple(() {}, borderRadius: BorderRadius.all(Radius.circular(13)));
+  }
 
-  @override
-  void dispose() {
-    _pageController.dispose();
-    super.dispose();
+  Widget _title() {
+    return Container(
+      margin: AppTheme.padding,
+      child: Row(
+        crossAxisAlignment: CrossAxisAlignment.center,
+        children: <Widget>[
+          Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: <Widget>[
+              TitleText(
+                text: isHomePageSelected ? 'Our' : 'Shopping',
+                fontSize: 27,
+                fontWeight: FontWeight.w400,
+              ),
+              TitleText(
+                text: isHomePageSelected ? 'Products' : 'Cart',
+                fontSize: 27,
+                fontWeight: FontWeight.w700,
+              ),
+            ],
+          ),
+          Spacer(),
+          !isHomePageSelected
+              ? Container(
+                  padding: EdgeInsets.all(10),
+                  child: Icon(Icons.delete_outline, color: LightColor.orange),
+                ).ripple(
+                  () {},
+                  borderRadius: BorderRadius.all(Radius.circular(13)),
+                )
+              : SizedBox(),
+        ],
+      ),
+    );
+  }
+
+  void onBottomIconPressed(int index) {
+    if (index == 0 || index == 1) {
+      setState(() {
+        isHomePageSelected = true;
+      });
+    } else {
+      setState(() {
+        isHomePageSelected = false;
+      });
+    }
   }
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      extendBody: true,
-      body: PageView(
-        controller: _pageController,
-        physics: const NeverScrollableScrollPhysics(),
-        children: _pages,
-      ),
-      bottomNavigationBar: Container(
-        decoration: BoxDecoration(
-          boxShadow: [
-            BoxShadow(
-              color: Colors.black.withOpacity(0.1),
-              blurRadius: 20,
-              offset: const Offset(0, 4),
+      body: SafeArea(
+        child: Stack(
+          fit: StackFit.expand,
+          children: <Widget>[
+            SingleChildScrollView(
+              child: Container(
+                height: AppTheme.fullHeight(context) - 50,
+                decoration: BoxDecoration(
+                  gradient: LinearGradient(
+                    colors: [Color(0xfffbfbfb), Color(0xfff7f7f7)],
+                    begin: Alignment.topCenter,
+                    end: Alignment.bottomCenter,
+                  ),
+                ),
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: <Widget>[
+                    _appBar(),
+                    _title(),
+                    Expanded(
+                      child: AnimatedSwitcher(
+                        duration: Duration(milliseconds: 300),
+                        switchInCurve: Curves.easeInToLinear,
+                        switchOutCurve: Curves.easeOutBack,
+                        child: isHomePageSelected
+                            ? MyHomePage()
+                            : Align(
+                                alignment: Alignment.topCenter,
+                                child: ShoppingCartPage(),
+                              ),
+                      ),
+                    ),
+                  ],
+                ),
+              ),
+            ),
+            Positioned(
+              bottom: 0,
+              right: 0,
+              child: CustomBottomNavigationBar(
+                onIconPresedCallback: onBottomIconPressed,
+              ),
             ),
           ],
-        ),
-        child: Padding(
-          padding: const EdgeInsets.only(bottom: 10, left: 10, right: 10),
-          child: AnimatedNotchBottomBar(
-            notchBottomBarController: _controller,
-            color: Colors.white,
-            showLabel: false,
-            bottomBarWidth: MediaQuery.of(context).size.width,
-            durationInMilliSeconds: 300,
-            kBottomRadius: 28.0,
-            notchColor: Colors.black.withOpacity(0.9),
-            showShadow: false,
-            kIconSize: 24.0,
-            bottomBarItems: const [
-              BottomBarItem(
-                inActiveItem: Icon(
-                  Icons.shopping_cart_outlined,
-                  color: Colors.black54,
-                ),
-                activeItem: Icon(
-                  Icons.shopping_cart,
-                  color: Colors.blue,
-                ),
-                itemLabel: 'Cart',
-              ),
-              BottomBarItem(
-                inActiveItem: Icon(
-                  Icons.battery_full_outlined,
-                  color: Colors.black54,
-                ),
-                activeItem: Icon(
-                  Icons.battery_full,
-                  color: Colors.green,
-                ),
-                itemLabel: 'Battery',
-              ),
-              BottomBarItem(
-                inActiveItem: Icon(
-                  Icons.wifi_outlined,
-                  color: Colors.black54,
-                ),
-                activeItem: Icon(
-                  Icons.wifi,
-                  color: Colors.orange,
-                ),
-                itemLabel: 'Connectivity',
-              ),
-            ],
-            onTap: (index) {
-              _pageController.jumpToPage(index);
-            },
-          ),
         ),
       ),
     );
