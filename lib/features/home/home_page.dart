@@ -6,6 +6,7 @@ import 'package:rc_smart_cart_app/themes/theme.dart';
 import 'package:rc_smart_cart_app/widgets/product_card.dart';
 import 'package:rc_smart_cart_app/widgets/product_icon.dart';
 import 'package:rc_smart_cart_app/widgets/extentions.dart';
+import "package:rc_smart_cart_app/model/product.dart";
 
 class MyHomePage extends StatefulWidget {
   const MyHomePage({super.key, this.title});
@@ -55,36 +56,65 @@ class _MyHomePageState extends State<MyHomePage> {
     );
   }
 
-  Widget _productWidget() {
-    return Container(
-      margin: EdgeInsets.symmetric(vertical: 10),
-      width: AppTheme.fullWidth(context),
-      height: AppTheme.fullWidth(context) * .7,
-      child: GridView(
-        gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
-          crossAxisCount: 1,
-          childAspectRatio: 4 / 3,
-          mainAxisSpacing: 30,
-          crossAxisSpacing: 20,
-        ),
-        padding: EdgeInsets.only(left: 20),
-        scrollDirection: Axis.horizontal,
-        children: AppData.productList
-            .map(
-              (product) => ProductCard(
-                product: product,
-                onSelected: (model) {
-                  setState(() {
-                    AppData.productList.forEach((item) {
-                      item.isSelected = false;
-                    });
-                    model.isSelected = true;
-                  });
-                },
+  Widget _productWidgetMultipleRows(String category) {
+    return FutureBuilder<List<Product>>(
+      future: AppData.fetchProductsByCategory(category, pageSize: 50),
+      builder: (context, snapshot) {
+        if (snapshot.connectionState == ConnectionState.waiting) {
+          return Center(child: CircularProgressIndicator());
+        } else if (snapshot.hasError) {
+          print(snapshot.error);
+          return Center(child: Text('Error: ${snapshot.error}'));
+        } else if (!snapshot.hasData || snapshot.data!.isEmpty) {
+          return Center(child: Text('No products found.'));
+        }
+
+        final List<Product> products = snapshot.data!;
+        const int productsPerRow = 10;
+        final int numRows = (products.length / productsPerRow).ceil();
+
+        return Column(
+          children: List.generate(numRows, (rowIndex) {
+            final startIndex = rowIndex * productsPerRow;
+            final endIndex = (startIndex + productsPerRow) > products.length
+                ? products.length
+                : (startIndex + productsPerRow);
+            final List<Product> productsRow =
+                products.sublist(startIndex, endIndex);
+
+            return Container(
+              margin: EdgeInsets.symmetric(vertical: 10),
+              width: AppTheme.fullWidth(context),
+              height: AppTheme.fullWidth(context) * .7,
+              child: GridView(
+                gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
+                  crossAxisCount: 1,
+                  childAspectRatio: 4 / 3,
+                  mainAxisSpacing: 30,
+                  crossAxisSpacing: 20,
+                ),
+                padding: const EdgeInsets.only(left: 20),
+                scrollDirection: Axis.horizontal,
+                children: productsRow
+                    .map(
+                      (product) => ProductCard(
+                        product: product,
+                        onSelected: (model) {
+                          setState(() {
+                            products.forEach((item) {
+                              item.isSelected = false;
+                            });
+                            model.isSelected = true;
+                          });
+                        },
+                      ),
+                    )
+                    .toList(),
               ),
-            )
-            .toList(),
-      ),
+            );
+          }),
+        );
+      },
     );
   }
 
@@ -101,7 +131,7 @@ class _MyHomePageState extends State<MyHomePage> {
                 color: LightColor.lightGrey.withAlpha(100),
                 borderRadius: BorderRadius.all(Radius.circular(10)),
               ),
-              child: TextField(
+              child: const TextField(
                 decoration: InputDecoration(
                   border: InputBorder.none,
                   hintText: "Search Products",
@@ -129,12 +159,16 @@ class _MyHomePageState extends State<MyHomePage> {
     return Container(
       height: MediaQuery.of(context).size.height - 210,
       child: SingleChildScrollView(
-        physics: BouncingScrollPhysics(),
+        physics: const BouncingScrollPhysics(),
         dragStartBehavior: DragStartBehavior.down,
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           mainAxisAlignment: MainAxisAlignment.start,
-          children: <Widget>[_search(), _categoryWidget(), _productWidget()],
+          children: <Widget>[
+            _search(),
+            _categoryWidget(),
+            _productWidgetMultipleRows("Văn Phòng Phẩm - Đồ Chơi")
+          ],
         ),
       ),
     );

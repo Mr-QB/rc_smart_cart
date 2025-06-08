@@ -138,13 +138,10 @@ class _LoginPageState extends State<LoginPage> with TickerProviderStateMixin {
           ),
         );
 
-        Navigator.push(
+        Navigator.pushNamed(
           context,
-          MaterialPageRoute(
-            builder: (context) => OtpPage(
-              phoneNumber: '${phoneController.text}',
-            ),
-          ),
+          '/verify',
+          arguments: {'phoneNumber': phoneController.text},
         );
       }
     }

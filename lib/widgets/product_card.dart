@@ -68,7 +68,16 @@ class ProductCard extends StatelessWidget {
                         radius: 40,
                         backgroundColor: LightColor.orange.withAlpha(40),
                       ),
-                      Image.asset(product.image),
+                      Image.network(
+                        product.image,
+                        fit: BoxFit.cover,
+                        loadingBuilder: (context, child, progress) {
+                          if (progress == null) return child;
+                          return Center(child: CircularProgressIndicator());
+                        },
+                        errorBuilder: (context, error, stackTrace) =>
+                            Icon(Icons.broken_image),
+                      ),
                     ],
                   ),
                 ),

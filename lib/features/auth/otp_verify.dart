@@ -6,6 +6,7 @@ import 'package:http/http.dart' as http;
 
 import 'package:rc_smart_cart_app/core/constants/api_constants.dart';
 import 'package:rc_smart_cart_app/features/home/main_page.dart';
+import 'package:rc_smart_cart_app/services/auth_service.dart';
 
 class OtpPage extends StatefulWidget {
   final String phoneNumber;
@@ -98,6 +99,7 @@ class _OtpPageState extends State<OtpPage> {
       final success = await OtpService.verifyOtp(widget.phoneNumber, otp);
 
       if (success) {
+        await AuthService.saveLoginState(widget.phoneNumber);
         ScaffoldMessenger.of(context).showSnackBar(
           const SnackBar(
             content: Text('OTP verified successfully'),
@@ -106,14 +108,8 @@ class _OtpPageState extends State<OtpPage> {
           ),
         );
         if (mounted) {
-          Navigator.pushReplacement(
-            context,
-            MaterialPageRoute(
-              builder: (context) => const MainPage(),
-            ),
-          );
+          Navigator.pushReplacementNamed(context, '/home');
         }
-        // TODO: Navigate to next screen or handle successful verification
       } else {
         throw Exception('Invalid OTP');
       }
@@ -324,7 +320,7 @@ class OtpService {
   static Future<bool> verifyOtp(String phoneNumber, String otp) async {
     try {
       final response = await http.post(
-        Uri.parse('http://${ApiConstants.verifyOtpEndpoint}'),
+        Uri.parse('http://${ApiConstants.verify_otp_endpoint}'),
         headers: {
           'Content-Type': 'application/json',
         },

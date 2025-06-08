@@ -1,21 +1,21 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/services.dart';
+import 'package:rc_smart_cart_app/core/constants/route.dart';
 
-import 'package:rc_smart_cart_app/features/auth/login.dart';
-import 'package:rc_smart_cart_app/features/home/main_page.dart';
-
-void main() {
-  runApp(const MyApp());
+void main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+  final initialRoute = await Routes.getInitialRoute();
+  runApp(MyApp(initialRoute: initialRoute));
 }
 
 class MyApp extends StatelessWidget {
-  const MyApp({super.key});
+  final String initialRoute;
+
+  const MyApp({super.key, required this.initialRoute});
 
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Smart Cart Connect',
-      debugShowCheckedModeBanner: false,
+      title: 'Smart Cart',
       theme: ThemeData(
         colorScheme: ColorScheme.fromSeed(
           seedColor: Colors.black,
@@ -23,8 +23,8 @@ class MyApp extends StatelessWidget {
         ),
         useMaterial3: true,
       ),
-      // home: const LoginPage(),
-      home: const MainPage(),
+      initialRoute: initialRoute,
+      routes: Routes.getRoute(),
     );
   }
 }
