@@ -1,0 +1,6 @@
+names:
+- chinsu_tuong
+- c_sui
+nc: 2
+train: C:/Users/hoang/Desktop/retail_product_detection/data/images
+val: C:/Users/hoang/Desktop/retail_product_detection/data/images
