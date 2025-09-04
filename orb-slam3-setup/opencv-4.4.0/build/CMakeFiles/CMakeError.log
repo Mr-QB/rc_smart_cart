@@ -1,0 +1,405 @@
+Build output check failed:
+    Regex: 'argument .* is not valid'
+    Output line: 'cc1: warning: ‘-Werror=’ argument ‘-Werror=non-virtual-dtor’ is not valid for C'
+Compilation failed:
+    source file: '/home/cai/Dev/rc_smart_cart/orb-slam3-setup/opencv-4.4.0/build/CMakeFiles/CMakeTmp/src.c'
+    check option: ' -fsigned-char -W -Wall -Werror=return-type  -Werror=non-virtual-dtor'
+===== BUILD LOG =====
+Change Dir: /home/cai/Dev/rc_smart_cart/orb-slam3-setup/opencv-4.4.0/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_9dee1/fast && /usr/bin/make -f CMakeFiles/cmTC_9dee1.dir/build.make CMakeFiles/cmTC_9dee1.dir/build
+make[1]: Entering directory '/home/cai/Dev/rc_smart_cart/orb-slam3-setup/opencv-4.4.0/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_9dee1.dir/src.c.o
+/usr/bin/cc   -O3 -DNDEBUG -fPIE    -fsigned-char -W -Wall -Werror=return-type  -Werror=non-virtual-dtor -o CMakeFiles/cmTC_9dee1.dir/src.c.o   -c /home/cai/Dev/rc_smart_cart/orb-slam3-setup/opencv-4.4.0/build/CMakeFiles/CMakeTmp/src.c
+cc1: warning: ‘-Werror=’ argument ‘-Werror=non-virtual-dtor’ is not valid for C
+/home/cai/Dev/rc_smart_cart/orb-slam3-setup/opencv-4.4.0/build/CMakeFiles/CMakeTmp/src.c:1: warning: ignoring #pragma   [-Wunknown-pragmas]
+    1 | #pragma
+      | 
+Linking C executable cmTC_9dee1
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_9dee1.dir/link.txt --verbose=1
+/usr/bin/cc   -O3 -DNDEBUG    CMakeFiles/cmTC_9dee1.dir/src.c.o  -o cmTC_9dee1 
+make[1]: Leaving directory '/home/cai/Dev/rc_smart_cart/orb-slam3-setup/opencv-4.4.0/build/CMakeFiles/CMakeTmp'
+
+
+===== END =====
+
+Build output check failed:
+    Regex: 'command[- ]line option .* is valid for .* but not for C\+\+'
+    Output line: 'cc1plus: warning: command line option ‘-Wmissing-prototypes’ is valid for C/ObjC but not for C++'
+Compilation failed:
+    source file: '/home/cai/Dev/rc_smart_cart/orb-slam3-setup/opencv-4.4.0/build/CMakeFiles/CMakeTmp/src.cxx'
+    check option: ' -fsigned-char -W -Wall -Werror=return-type -Werror=non-virtual-dtor -Werror=address -Werror=sequence-point -Wformat -Werror=format-security -Wmissing-declarations  -Wmissing-prototypes'
+===== BUILD LOG =====
+Change Dir: /home/cai/Dev/rc_smart_cart/orb-slam3-setup/opencv-4.4.0/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_105cf/fast && /usr/bin/make -f CMakeFiles/cmTC_105cf.dir/build.make CMakeFiles/cmTC_105cf.dir/build
+make[1]: Entering directory '/home/cai/Dev/rc_smart_cart/orb-slam3-setup/opencv-4.4.0/build/CMakeFiles/CMakeTmp'
+Building CXX object CMakeFiles/cmTC_105cf.dir/src.cxx.o
+/usr/bin/c++    -O3 -DNDEBUG -fPIE    -fsigned-char -W -Wall -Werror=return-type -Werror=non-virtual-dtor -Werror=address -Werror=sequence-point -Wformat -Werror=format-security -Wmissing-declarations  -Wmissing-prototypes -std=c++11 -o CMakeFiles/cmTC_105cf.dir/src.cxx.o -c /home/cai/Dev/rc_smart_cart/orb-slam3-setup/opencv-4.4.0/build/CMakeFiles/CMakeTmp/src.cxx
+cc1plus: warning: command line option ‘-Wmissing-prototypes’ is valid for C/ObjC but not for C++
+/home/cai/Dev/rc_smart_cart/orb-slam3-setup/opencv-4.4.0/build/CMakeFiles/CMakeTmp/src.cxx:1: warning: ignoring #pragma   [-Wunknown-pragmas]
+    1 | #pragma
+      | 
+Linking CXX executable cmTC_105cf
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_105cf.dir/link.txt --verbose=1
+/usr/bin/c++    -O3 -DNDEBUG    CMakeFiles/cmTC_105cf.dir/src.cxx.o  -o cmTC_105cf 
+make[1]: Leaving directory '/home/cai/Dev/rc_smart_cart/orb-slam3-setup/opencv-4.4.0/build/CMakeFiles/CMakeTmp'
+
+
+===== END =====
+
+Build output check failed:
+    Regex: 'command[- ]line option .* is valid for .* but not for C\+\+'
+    Output line: 'cc1plus: warning: command line option ‘-Wstrict-prototypes’ is valid for C/ObjC but not for C++'
+Compilation failed:
+    source file: '/home/cai/Dev/rc_smart_cart/orb-slam3-setup/opencv-4.4.0/build/CMakeFiles/CMakeTmp/src.cxx'
+    check option: ' -fsigned-char -W -Wall -Werror=return-type -Werror=non-virtual-dtor -Werror=address -Werror=sequence-point -Wformat -Werror=format-security -Wmissing-declarations  -Wstrict-prototypes'
+===== BUILD LOG =====
+Change Dir: /home/cai/Dev/rc_smart_cart/orb-slam3-setup/opencv-4.4.0/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_978c7/fast && /usr/bin/make -f CMakeFiles/cmTC_978c7.dir/build.make CMakeFiles/cmTC_978c7.dir/build
+make[1]: Entering directory '/home/cai/Dev/rc_smart_cart/orb-slam3-setup/opencv-4.4.0/build/CMakeFiles/CMakeTmp'
+Building CXX object CMakeFiles/cmTC_978c7.dir/src.cxx.o
+/usr/bin/c++    -O3 -DNDEBUG -fPIE    -fsigned-char -W -Wall -Werror=return-type -Werror=non-virtual-dtor -Werror=address -Werror=sequence-point -Wformat -Werror=format-security -Wmissing-declarations  -Wstrict-prototypes -std=c++11 -o CMakeFiles/cmTC_978c7.dir/src.cxx.o -c /home/cai/Dev/rc_smart_cart/orb-slam3-setup/opencv-4.4.0/build/CMakeFiles/CMakeTmp/src.cxx
+cc1plus: warning: command line option ‘-Wstrict-prototypes’ is valid for C/ObjC but not for C++
+/home/cai/Dev/rc_smart_cart/orb-slam3-setup/opencv-4.4.0/build/CMakeFiles/CMakeTmp/src.cxx:1: warning: ignoring #pragma   [-Wunknown-pragmas]
+    1 | #pragma
+      | 
+Linking CXX executable cmTC_978c7
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_978c7.dir/link.txt --verbose=1
+/usr/bin/c++    -O3 -DNDEBUG    CMakeFiles/cmTC_978c7.dir/src.cxx.o  -o cmTC_978c7 
+make[1]: Leaving directory '/home/cai/Dev/rc_smart_cart/orb-slam3-setup/opencv-4.4.0/build/CMakeFiles/CMakeTmp'
+
+
+===== END =====
+
+Build output check failed:
+    Regex: 'command[- ]line option .* is valid for .* but not for C'
+    Output line: 'cc1: warning: command line option ‘-Wsign-promo’ is valid for C++/ObjC++ but not for C'
+Compilation failed:
+    source file: '/home/cai/Dev/rc_smart_cart/orb-slam3-setup/opencv-4.4.0/build/CMakeFiles/CMakeTmp/src.c'
+    check option: ' -fsigned-char -W -Wall -Werror=return-type -Werror=address -Werror=sequence-point -Wformat -Werror=format-security -Wmissing-declarations -Wmissing-prototypes -Wstrict-prototypes -Wundef -Winit-self -Wpointer-arith -Wshadow  -Wsign-promo'
+===== BUILD LOG =====
+Change Dir: /home/cai/Dev/rc_smart_cart/orb-slam3-setup/opencv-4.4.0/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_7c26a/fast && /usr/bin/make -f CMakeFiles/cmTC_7c26a.dir/build.make CMakeFiles/cmTC_7c26a.dir/build
+make[1]: Entering directory '/home/cai/Dev/rc_smart_cart/orb-slam3-setup/opencv-4.4.0/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_7c26a.dir/src.c.o
+/usr/bin/cc   -O3 -DNDEBUG -fPIE    -fsigned-char -W -Wall -Werror=return-type -Werror=address -Werror=sequence-point -Wformat -Werror=format-security -Wmissing-declarations -Wmissing-prototypes -Wstrict-prototypes -Wundef -Winit-self -Wpointer-arith -Wshadow  -Wsign-promo -o CMakeFiles/cmTC_7c26a.dir/src.c.o   -c /home/cai/Dev/rc_smart_cart/orb-slam3-setup/opencv-4.4.0/build/CMakeFiles/CMakeTmp/src.c
+cc1: warning: command line option ‘-Wsign-promo’ is valid for C++/ObjC++ but not for C
+/home/cai/Dev/rc_smart_cart/orb-slam3-setup/opencv-4.4.0/build/CMakeFiles/CMakeTmp/src.c:1: warning: ignoring #pragma   [-Wunknown-pragmas]
+    1 | #pragma
+      | 
+Linking C executable cmTC_7c26a
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_7c26a.dir/link.txt --verbose=1
+/usr/bin/cc   -O3 -DNDEBUG    CMakeFiles/cmTC_7c26a.dir/src.c.o  -o cmTC_7c26a 
+make[1]: Leaving directory '/home/cai/Dev/rc_smart_cart/orb-slam3-setup/opencv-4.4.0/build/CMakeFiles/CMakeTmp'
+
+
+===== END =====
+
+Build output check failed:
+    Regex: 'command[- ]line option .* is valid for .* but not for C'
+    Output line: 'cc1: warning: command line option ‘-Wsuggest-override’ is valid for C++/ObjC++ but not for C'
+Compilation failed:
+    source file: '/home/cai/Dev/rc_smart_cart/orb-slam3-setup/opencv-4.4.0/build/CMakeFiles/CMakeTmp/src.c'
+    check option: ' -fsigned-char -W -Wall -Werror=return-type -Werror=address -Werror=sequence-point -Wformat -Werror=format-security -Wmissing-declarations -Wmissing-prototypes -Wstrict-prototypes -Wundef -Winit-self -Wpointer-arith -Wshadow -Wuninitialized -Winit-self  -Wsuggest-override'
+===== BUILD LOG =====
+Change Dir: /home/cai/Dev/rc_smart_cart/orb-slam3-setup/opencv-4.4.0/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_1bf4e/fast && /usr/bin/make -f CMakeFiles/cmTC_1bf4e.dir/build.make CMakeFiles/cmTC_1bf4e.dir/build
+make[1]: Entering directory '/home/cai/Dev/rc_smart_cart/orb-slam3-setup/opencv-4.4.0/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_1bf4e.dir/src.c.o
+/usr/bin/cc   -O3 -DNDEBUG -fPIE    -fsigned-char -W -Wall -Werror=return-type -Werror=address -Werror=sequence-point -Wformat -Werror=format-security -Wmissing-declarations -Wmissing-prototypes -Wstrict-prototypes -Wundef -Winit-self -Wpointer-arith -Wshadow -Wuninitialized -Winit-self  -Wsuggest-override -o CMakeFiles/cmTC_1bf4e.dir/src.c.o   -c /home/cai/Dev/rc_smart_cart/orb-slam3-setup/opencv-4.4.0/build/CMakeFiles/CMakeTmp/src.c
+cc1: warning: command line option ‘-Wsuggest-override’ is valid for C++/ObjC++ but not for C
+/home/cai/Dev/rc_smart_cart/orb-slam3-setup/opencv-4.4.0/build/CMakeFiles/CMakeTmp/src.c:1: warning: ignoring #pragma   [-Wunknown-pragmas]
+    1 | #pragma
+      | 
+Linking C executable cmTC_1bf4e
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_1bf4e.dir/link.txt --verbose=1
+/usr/bin/cc   -O3 -DNDEBUG    CMakeFiles/cmTC_1bf4e.dir/src.c.o  -o cmTC_1bf4e 
+make[1]: Leaving directory '/home/cai/Dev/rc_smart_cart/orb-slam3-setup/opencv-4.4.0/build/CMakeFiles/CMakeTmp'
+
+
+===== END =====
+
+Build output check failed:
+    Regex: 'command[- ]line option .* is valid for .* but not for C'
+    Output line: 'cc1: warning: command line option ‘-Wno-delete-non-virtual-dtor’ is valid for C++/ObjC++ but not for C'
+Compilation failed:
+    source file: '/home/cai/Dev/rc_smart_cart/orb-slam3-setup/opencv-4.4.0/build/CMakeFiles/CMakeTmp/src.c'
+    check option: ' -fsigned-char -W -Wall -Werror=return-type -Werror=address -Werror=sequence-point -Wformat -Werror=format-security -Wmissing-declarations -Wmissing-prototypes -Wstrict-prototypes -Wundef -Winit-self -Wpointer-arith -Wshadow -Wuninitialized -Winit-self  -Wno-delete-non-virtual-dtor'
+===== BUILD LOG =====
+Change Dir: /home/cai/Dev/rc_smart_cart/orb-slam3-setup/opencv-4.4.0/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_3402e/fast && /usr/bin/make -f CMakeFiles/cmTC_3402e.dir/build.make CMakeFiles/cmTC_3402e.dir/build
+make[1]: Entering directory '/home/cai/Dev/rc_smart_cart/orb-slam3-setup/opencv-4.4.0/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_3402e.dir/src.c.o
+/usr/bin/cc   -O3 -DNDEBUG -fPIE    -fsigned-char -W -Wall -Werror=return-type -Werror=address -Werror=sequence-point -Wformat -Werror=format-security -Wmissing-declarations -Wmissing-prototypes -Wstrict-prototypes -Wundef -Winit-self -Wpointer-arith -Wshadow -Wuninitialized -Winit-self  -Wno-delete-non-virtual-dtor -o CMakeFiles/cmTC_3402e.dir/src.c.o   -c /home/cai/Dev/rc_smart_cart/orb-slam3-setup/opencv-4.4.0/build/CMakeFiles/CMakeTmp/src.c
+cc1: warning: command line option ‘-Wno-delete-non-virtual-dtor’ is valid for C++/ObjC++ but not for C
+/home/cai/Dev/rc_smart_cart/orb-slam3-setup/opencv-4.4.0/build/CMakeFiles/CMakeTmp/src.c:1: warning: ignoring #pragma   [-Wunknown-pragmas]
+    1 | #pragma
+      | 
+Linking C executable cmTC_3402e
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_3402e.dir/link.txt --verbose=1
+/usr/bin/cc   -O3 -DNDEBUG    CMakeFiles/cmTC_3402e.dir/src.c.o  -o cmTC_3402e 
+make[1]: Leaving directory '/home/cai/Dev/rc_smart_cart/orb-slam3-setup/opencv-4.4.0/build/CMakeFiles/CMakeTmp'
+
+
+===== END =====
+
+Build output check failed:
+    Regex: 'unrecognized .*option'
+    Output line: 'cc1plus: warning: unrecognized command line option ‘-Wno-unnamed-type-template-args’'
+Compilation failed:
+    source file: '/home/cai/Dev/rc_smart_cart/orb-slam3-setup/opencv-4.4.0/build/CMakeFiles/CMakeTmp/src.cxx'
+    check option: ' -fsigned-char -W -Wall -Werror=return-type -Werror=non-virtual-dtor -Werror=address -Werror=sequence-point -Wformat -Werror=format-security -Wmissing-declarations -Wundef -Winit-self -Wpointer-arith -Wshadow -Wsign-promo -Wuninitialized -Winit-self -Wsuggest-override -Wno-delete-non-virtual-dtor  -Wno-unnamed-type-template-args'
+===== BUILD LOG =====
+Change Dir: /home/cai/Dev/rc_smart_cart/orb-slam3-setup/opencv-4.4.0/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_78f5f/fast && /usr/bin/make -f CMakeFiles/cmTC_78f5f.dir/build.make CMakeFiles/cmTC_78f5f.dir/build
+make[1]: Entering directory '/home/cai/Dev/rc_smart_cart/orb-slam3-setup/opencv-4.4.0/build/CMakeFiles/CMakeTmp'
+Building CXX object CMakeFiles/cmTC_78f5f.dir/src.cxx.o
+/usr/bin/c++    -O3 -DNDEBUG -fPIE    -fsigned-char -W -Wall -Werror=return-type -Werror=non-virtual-dtor -Werror=address -Werror=sequence-point -Wformat -Werror=format-security -Wmissing-declarations -Wundef -Winit-self -Wpointer-arith -Wshadow -Wsign-promo -Wuninitialized -Winit-self -Wsuggest-override -Wno-delete-non-virtual-dtor  -Wno-unnamed-type-template-args -std=c++11 -o CMakeFiles/cmTC_78f5f.dir/src.cxx.o -c /home/cai/Dev/rc_smart_cart/orb-slam3-setup/opencv-4.4.0/build/CMakeFiles/CMakeTmp/src.cxx
+/home/cai/Dev/rc_smart_cart/orb-slam3-setup/opencv-4.4.0/build/CMakeFiles/CMakeTmp/src.cxx:1: warning: ignoring #pragma   [-Wunknown-pragmas]
+    1 | #pragma
+      | 
+cc1plus: warning: unrecognized command line option ‘-Wno-unnamed-type-template-args’
+Linking CXX executable cmTC_78f5f
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_78f5f.dir/link.txt --verbose=1
+/usr/bin/c++    -O3 -DNDEBUG    CMakeFiles/cmTC_78f5f.dir/src.cxx.o  -o cmTC_78f5f 
+make[1]: Leaving directory '/home/cai/Dev/rc_smart_cart/orb-slam3-setup/opencv-4.4.0/build/CMakeFiles/CMakeTmp'
+
+
+===== END =====
+
+Build output check failed:
+    Regex: 'unrecognized .*option'
+    Output line: 'cc1: warning: unrecognized command line option ‘-Wno-unnamed-type-template-args’'
+Compilation failed:
+    source file: '/home/cai/Dev/rc_smart_cart/orb-slam3-setup/opencv-4.4.0/build/CMakeFiles/CMakeTmp/src.c'
+    check option: ' -fsigned-char -W -Wall -Werror=return-type -Werror=address -Werror=sequence-point -Wformat -Werror=format-security -Wmissing-declarations -Wmissing-prototypes -Wstrict-prototypes -Wundef -Winit-self -Wpointer-arith -Wshadow -Wuninitialized -Winit-self  -Wno-unnamed-type-template-args'
+===== BUILD LOG =====
+Change Dir: /home/cai/Dev/rc_smart_cart/orb-slam3-setup/opencv-4.4.0/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_1fd77/fast && /usr/bin/make -f CMakeFiles/cmTC_1fd77.dir/build.make CMakeFiles/cmTC_1fd77.dir/build
+make[1]: Entering directory '/home/cai/Dev/rc_smart_cart/orb-slam3-setup/opencv-4.4.0/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_1fd77.dir/src.c.o
+/usr/bin/cc   -O3 -DNDEBUG -fPIE    -fsigned-char -W -Wall -Werror=return-type -Werror=address -Werror=sequence-point -Wformat -Werror=format-security -Wmissing-declarations -Wmissing-prototypes -Wstrict-prototypes -Wundef -Winit-self -Wpointer-arith -Wshadow -Wuninitialized -Winit-self  -Wno-unnamed-type-template-args -o CMakeFiles/cmTC_1fd77.dir/src.c.o   -c /home/cai/Dev/rc_smart_cart/orb-slam3-setup/opencv-4.4.0/build/CMakeFiles/CMakeTmp/src.c
+/home/cai/Dev/rc_smart_cart/orb-slam3-setup/opencv-4.4.0/build/CMakeFiles/CMakeTmp/src.c:1: warning: ignoring #pragma   [-Wunknown-pragmas]
+    1 | #pragma
+      | 
+cc1: warning: unrecognized command line option ‘-Wno-unnamed-type-template-args’
+Linking C executable cmTC_1fd77
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_1fd77.dir/link.txt --verbose=1
+/usr/bin/cc   -O3 -DNDEBUG    CMakeFiles/cmTC_1fd77.dir/src.c.o  -o cmTC_1fd77 
+make[1]: Leaving directory '/home/cai/Dev/rc_smart_cart/orb-slam3-setup/opencv-4.4.0/build/CMakeFiles/CMakeTmp'
+
+
+===== END =====
+
+Build output check failed:
+    Regex: 'command[- ]line option .* is valid for .* but not for C'
+    Output line: 'cc1: warning: command line option ‘-fvisibility-inlines-hidden’ is valid for C++/ObjC++ but not for C'
+Compilation failed:
+    source file: '/home/cai/Dev/rc_smart_cart/orb-slam3-setup/opencv-4.4.0/build/CMakeFiles/CMakeTmp/src.c'
+    check option: ' -fsigned-char -W -Wall -Werror=return-type -Werror=address -Werror=sequence-point -Wformat -Werror=format-security -Wmissing-declarations -Wmissing-prototypes -Wstrict-prototypes -Wundef -Winit-self -Wpointer-arith -Wshadow -Wuninitialized -Winit-self -Wno-comment -Wimplicit-fallthrough=3 -Wno-strict-overflow -fdiagnostics-show-option -Wno-long-long -pthread -fomit-frame-pointer -ffunction-sections -fdata-sections  -msse -msse2 -msse3 -fvisibility=hidden  -fvisibility-inlines-hidden'
+===== BUILD LOG =====
+Change Dir: /home/cai/Dev/rc_smart_cart/orb-slam3-setup/opencv-4.4.0/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_d884b/fast && /usr/bin/make -f CMakeFiles/cmTC_d884b.dir/build.make CMakeFiles/cmTC_d884b.dir/build
+make[1]: Entering directory '/home/cai/Dev/rc_smart_cart/orb-slam3-setup/opencv-4.4.0/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_d884b.dir/src.c.o
+/usr/bin/cc   -O3 -DNDEBUG -fPIE    -fsigned-char -W -Wall -Werror=return-type -Werror=address -Werror=sequence-point -Wformat -Werror=format-security -Wmissing-declarations -Wmissing-prototypes -Wstrict-prototypes -Wundef -Winit-self -Wpointer-arith -Wshadow -Wuninitialized -Winit-self -Wno-comment -Wimplicit-fallthrough=3 -Wno-strict-overflow -fdiagnostics-show-option -Wno-long-long -pthread -fomit-frame-pointer -ffunction-sections -fdata-sections  -msse -msse2 -msse3 -fvisibility=hidden  -fvisibility-inlines-hidden -o CMakeFiles/cmTC_d884b.dir/src.c.o   -c /home/cai/Dev/rc_smart_cart/orb-slam3-setup/opencv-4.4.0/build/CMakeFiles/CMakeTmp/src.c
+cc1: warning: command line option ‘-fvisibility-inlines-hidden’ is valid for C++/ObjC++ but not for C
+/home/cai/Dev/rc_smart_cart/orb-slam3-setup/opencv-4.4.0/build/CMakeFiles/CMakeTmp/src.c:1: warning: ignoring #pragma   [-Wunknown-pragmas]
+    1 | #pragma
+      | 
+Linking C executable cmTC_d884b
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_d884b.dir/link.txt --verbose=1
+/usr/bin/cc   -O3 -DNDEBUG    CMakeFiles/cmTC_d884b.dir/src.c.o  -o cmTC_d884b 
+make[1]: Leaving directory '/home/cai/Dev/rc_smart_cart/orb-slam3-setup/opencv-4.4.0/build/CMakeFiles/CMakeTmp'
+
+
+===== END =====
+
+Determining if the function sgemm_ exists failed with the following output:
+Change Dir: /home/cai/Dev/rc_smart_cart/orb-slam3-setup/opencv-4.4.0/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_4021e/fast && /usr/bin/make -f CMakeFiles/cmTC_4021e.dir/build.make CMakeFiles/cmTC_4021e.dir/build
+make[1]: Entering directory '/home/cai/Dev/rc_smart_cart/orb-slam3-setup/opencv-4.4.0/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_4021e.dir/CheckFunctionExists.c.o
+/usr/bin/cc   -fsigned-char -W -Wall -Werror=return-type -Werror=address -Werror=sequence-point -Wformat -Werror=format-security -Wmissing-declarations -Wmissing-prototypes -Wstrict-prototypes -Wundef -Winit-self -Wpointer-arith -Wshadow -Wuninitialized -Winit-self -Wno-comment -Wimplicit-fallthrough=3 -Wno-strict-overflow -fdiagnostics-show-option -Wno-long-long -pthread -fomit-frame-pointer -ffunction-sections -fdata-sections  -msse -msse2 -msse3 -fvisibility=hidden -DCHECK_FUNCTION_EXISTS=sgemm_ -O3 -DNDEBUG  -DNDEBUG -fPIE   -o CMakeFiles/cmTC_4021e.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-3.16/Modules/CheckFunctionExists.c
+Linking C executable cmTC_4021e
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_4021e.dir/link.txt --verbose=1
+/usr/bin/cc    -fsigned-char -W -Wall -Werror=return-type -Werror=address -Werror=sequence-point -Wformat -Werror=format-security -Wmissing-declarations -Wmissing-prototypes -Wstrict-prototypes -Wundef -Winit-self -Wpointer-arith -Wshadow -Wuninitialized -Winit-self -Wno-comment -Wimplicit-fallthrough=3 -Wno-strict-overflow -fdiagnostics-show-option -Wno-long-long -pthread -fomit-frame-pointer -ffunction-sections -fdata-sections  -msse -msse2 -msse3 -fvisibility=hidden -DCHECK_FUNCTION_EXISTS=sgemm_ -O3 -DNDEBUG  -DNDEBUG    -Wl,--gc-sections -Wl,--as-needed  CMakeFiles/cmTC_4021e.dir/CheckFunctionExists.c.o  -o cmTC_4021e 
+/usr/bin/ld: CMakeFiles/cmTC_4021e.dir/CheckFunctionExists.c.o: in function `main':
+CheckFunctionExists.c:(.text.startup.main+0x10): undefined reference to `sgemm_'
+collect2: error: ld returned 1 exit status
+make[1]: *** [CMakeFiles/cmTC_4021e.dir/build.make:87: cmTC_4021e] Error 1
+make[1]: Leaving directory '/home/cai/Dev/rc_smart_cart/orb-slam3-setup/opencv-4.4.0/build/CMakeFiles/CMakeTmp'
+make: *** [Makefile:121: cmTC_4021e/fast] Error 2
+
+
+
+Determining if the function cheev_ exists failed with the following output:
+Change Dir: /home/cai/Dev/rc_smart_cart/orb-slam3-setup/opencv-4.4.0/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_03160/fast && /usr/bin/make -f CMakeFiles/cmTC_03160.dir/build.make CMakeFiles/cmTC_03160.dir/build
+make[1]: Entering directory '/home/cai/Dev/rc_smart_cart/orb-slam3-setup/opencv-4.4.0/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_03160.dir/CheckFunctionExists.c.o
+/usr/bin/cc   -fsigned-char -W -Wall -Werror=return-type -Werror=address -Werror=sequence-point -Wformat -Werror=format-security -Wmissing-declarations -Wmissing-prototypes -Wstrict-prototypes -Wundef -Winit-self -Wpointer-arith -Wshadow -Wuninitialized -Winit-self -Wno-comment -Wimplicit-fallthrough=3 -Wno-strict-overflow -fdiagnostics-show-option -Wno-long-long -pthread -fomit-frame-pointer -ffunction-sections -fdata-sections  -msse -msse2 -msse3 -fvisibility=hidden -DCHECK_FUNCTION_EXISTS=cheev_ -O3 -DNDEBUG  -DNDEBUG -fPIE   -o CMakeFiles/cmTC_03160.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-3.16/Modules/CheckFunctionExists.c
+Linking C executable cmTC_03160
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_03160.dir/link.txt --verbose=1
+/usr/bin/cc    -fsigned-char -W -Wall -Werror=return-type -Werror=address -Werror=sequence-point -Wformat -Werror=format-security -Wmissing-declarations -Wmissing-prototypes -Wstrict-prototypes -Wundef -Winit-self -Wpointer-arith -Wshadow -Wuninitialized -Winit-self -Wno-comment -Wimplicit-fallthrough=3 -Wno-strict-overflow -fdiagnostics-show-option -Wno-long-long -pthread -fomit-frame-pointer -ffunction-sections -fdata-sections  -msse -msse2 -msse3 -fvisibility=hidden -DCHECK_FUNCTION_EXISTS=cheev_ -O3 -DNDEBUG  -DNDEBUG    -Wl,--gc-sections -Wl,--as-needed  CMakeFiles/cmTC_03160.dir/CheckFunctionExists.c.o  -o cmTC_03160  /usr/lib/x86_64-linux-gnu/libblas.so 
+/usr/bin/ld: CMakeFiles/cmTC_03160.dir/CheckFunctionExists.c.o: in function `main':
+CheckFunctionExists.c:(.text.startup.main+0x10): undefined reference to `cheev_'
+collect2: error: ld returned 1 exit status
+make[1]: *** [CMakeFiles/cmTC_03160.dir/build.make:88: cmTC_03160] Error 1
+make[1]: Leaving directory '/home/cai/Dev/rc_smart_cart/orb-slam3-setup/opencv-4.4.0/build/CMakeFiles/CMakeTmp'
+make: *** [Makefile:121: cmTC_03160/fast] Error 2
+
+
+
+Build output check failed:
+    Regex: 'command[- ]line option .* is valid for .* but not for C\+\+'
+    Output line: 'cc1plus: warning: command line option ‘-Wno-missing-prototypes’ is valid for C/ObjC but not for C++'
+Compilation failed:
+    source file: '/home/cai/Dev/rc_smart_cart/orb-slam3-setup/opencv-4.4.0/build/CMakeFiles/CMakeTmp/src.cxx'
+    check option: ' -Wno-missing-prototypes'
+===== BUILD LOG =====
+Change Dir: /home/cai/Dev/rc_smart_cart/orb-slam3-setup/opencv-4.4.0/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_2026a/fast && /usr/bin/make -f CMakeFiles/cmTC_2026a.dir/build.make CMakeFiles/cmTC_2026a.dir/build
+make[1]: Entering directory '/home/cai/Dev/rc_smart_cart/orb-slam3-setup/opencv-4.4.0/build/CMakeFiles/CMakeTmp'
+Building CXX object CMakeFiles/cmTC_2026a.dir/src.cxx.o
+/usr/bin/c++    -fsigned-char -W -Wall -Werror=return-type -Werror=non-virtual-dtor -Werror=address -Werror=sequence-point -Wformat -Werror=format-security -Wmissing-declarations -Wundef -Winit-self -Wpointer-arith -Wshadow -Wsign-promo -Wuninitialized -Winit-self -Wsuggest-override -Wno-delete-non-virtual-dtor -Wno-comment -Wimplicit-fallthrough=3 -Wno-strict-overflow -fdiagnostics-show-option -Wno-long-long -pthread -fomit-frame-pointer -ffunction-sections -fdata-sections  -msse -msse2 -msse3 -fvisibility=hidden -fvisibility-inlines-hidden -Wno-deprecated  -O3 -DNDEBUG  -DNDEBUG -fPIE    -Wno-missing-prototypes -std=c++11 -o CMakeFiles/cmTC_2026a.dir/src.cxx.o -c /home/cai/Dev/rc_smart_cart/orb-slam3-setup/opencv-4.4.0/build/CMakeFiles/CMakeTmp/src.cxx
+cc1plus: warning: command line option ‘-Wno-missing-prototypes’ is valid for C/ObjC but not for C++
+/home/cai/Dev/rc_smart_cart/orb-slam3-setup/opencv-4.4.0/build/CMakeFiles/CMakeTmp/src.cxx:1: warning: ignoring #pragma   [-Wunknown-pragmas]
+    1 | #pragma
+      | 
+Linking CXX executable cmTC_2026a
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_2026a.dir/link.txt --verbose=1
+/usr/bin/c++     -fsigned-char -W -Wall -Werror=return-type -Werror=non-virtual-dtor -Werror=address -Werror=sequence-point -Wformat -Werror=format-security -Wmissing-declarations -Wundef -Winit-self -Wpointer-arith -Wshadow -Wsign-promo -Wuninitialized -Winit-self -Wsuggest-override -Wno-delete-non-virtual-dtor -Wno-comment -Wimplicit-fallthrough=3 -Wno-strict-overflow -fdiagnostics-show-option -Wno-long-long -pthread -fomit-frame-pointer -ffunction-sections -fdata-sections  -msse -msse2 -msse3 -fvisibility=hidden -fvisibility-inlines-hidden -Wno-deprecated  -O3 -DNDEBUG  -DNDEBUG    -Wl,--gc-sections -Wl,--as-needed  CMakeFiles/cmTC_2026a.dir/src.cxx.o  -o cmTC_2026a 
+make[1]: Leaving directory '/home/cai/Dev/rc_smart_cart/orb-slam3-setup/opencv-4.4.0/build/CMakeFiles/CMakeTmp'
+
+
+===== END =====
+
+Build output check failed:
+    Regex: 'unrecognized .*option'
+    Output line: 'cc1plus: warning: unrecognized command line option ‘-Wno-tautological-undefined-compare’'
+Compilation failed:
+    source file: '/home/cai/Dev/rc_smart_cart/orb-slam3-setup/opencv-4.4.0/build/CMakeFiles/CMakeTmp/src.cxx'
+    check option: ' -Wno-tautological-undefined-compare'
+===== BUILD LOG =====
+Change Dir: /home/cai/Dev/rc_smart_cart/orb-slam3-setup/opencv-4.4.0/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_1b50e/fast && /usr/bin/make -f CMakeFiles/cmTC_1b50e.dir/build.make CMakeFiles/cmTC_1b50e.dir/build
+make[1]: Entering directory '/home/cai/Dev/rc_smart_cart/orb-slam3-setup/opencv-4.4.0/build/CMakeFiles/CMakeTmp'
+Building CXX object CMakeFiles/cmTC_1b50e.dir/src.cxx.o
+/usr/bin/c++    -fsigned-char -W -Wall -Werror=return-type -Werror=non-virtual-dtor -Werror=address -Werror=sequence-point -Wformat -Werror=format-security -Winit-self -Wpointer-arith -Wuninitialized -Winit-self -Wsuggest-override -Wno-delete-non-virtual-dtor -Wno-comment -Wimplicit-fallthrough=3 -Wno-strict-overflow -fdiagnostics-show-option -Wno-long-long -pthread -fomit-frame-pointer -ffunction-sections -fdata-sections  -msse -msse2 -msse3 -fvisibility=hidden -fvisibility-inlines-hidden -Wno-deprecated -Wno-missing-declarations -Wno-shadow -Wno-unused-parameter -Wno-unused-local-typedefs -Wno-sign-compare -Wno-sign-promo -Wno-undef  -O3 -DNDEBUG  -DNDEBUG -fPIE    -Wno-tautological-undefined-compare -std=c++11 -o CMakeFiles/cmTC_1b50e.dir/src.cxx.o -c /home/cai/Dev/rc_smart_cart/orb-slam3-setup/opencv-4.4.0/build/CMakeFiles/CMakeTmp/src.cxx
+/home/cai/Dev/rc_smart_cart/orb-slam3-setup/opencv-4.4.0/build/CMakeFiles/CMakeTmp/src.cxx:1: warning: ignoring #pragma   [-Wunknown-pragmas]
+    1 | #pragma
+      | 
+cc1plus: warning: unrecognized command line option ‘-Wno-tautological-undefined-compare’
+Linking CXX executable cmTC_1b50e
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_1b50e.dir/link.txt --verbose=1
+/usr/bin/c++     -fsigned-char -W -Wall -Werror=return-type -Werror=non-virtual-dtor -Werror=address -Werror=sequence-point -Wformat -Werror=format-security -Winit-self -Wpointer-arith -Wuninitialized -Winit-self -Wsuggest-override -Wno-delete-non-virtual-dtor -Wno-comment -Wimplicit-fallthrough=3 -Wno-strict-overflow -fdiagnostics-show-option -Wno-long-long -pthread -fomit-frame-pointer -ffunction-sections -fdata-sections  -msse -msse2 -msse3 -fvisibility=hidden -fvisibility-inlines-hidden -Wno-deprecated -Wno-missing-declarations -Wno-shadow -Wno-unused-parameter -Wno-unused-local-typedefs -Wno-sign-compare -Wno-sign-promo -Wno-undef  -O3 -DNDEBUG  -DNDEBUG    -Wl,--gc-sections -Wl,--as-needed  CMakeFiles/cmTC_1b50e.dir/src.cxx.o  -o cmTC_1b50e 
+make[1]: Leaving directory '/home/cai/Dev/rc_smart_cart/orb-slam3-setup/opencv-4.4.0/build/CMakeFiles/CMakeTmp'
+
+
+===== END =====
+
+Build output check failed:
+    Regex: 'unrecognized .*option'
+    Output line: 'cc1plus: warning: unrecognized command line option ‘-Wno-shorten-64-to-32’'
+Compilation failed:
+    source file: '/home/cai/Dev/rc_smart_cart/orb-slam3-setup/opencv-4.4.0/build/CMakeFiles/CMakeTmp/src.cxx'
+    check option: ' -Wno-shorten-64-to-32'
+===== BUILD LOG =====
+Change Dir: /home/cai/Dev/rc_smart_cart/orb-slam3-setup/opencv-4.4.0/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_ea440/fast && /usr/bin/make -f CMakeFiles/cmTC_ea440.dir/build.make CMakeFiles/cmTC_ea440.dir/build
+make[1]: Entering directory '/home/cai/Dev/rc_smart_cart/orb-slam3-setup/opencv-4.4.0/build/CMakeFiles/CMakeTmp'
+Building CXX object CMakeFiles/cmTC_ea440.dir/src.cxx.o
+/usr/bin/c++    -fsigned-char -W -Wall -Werror=return-type -Werror=non-virtual-dtor -Werror=address -Werror=sequence-point -Wformat -Werror=format-security -Winit-self -Wpointer-arith -Wuninitialized -Winit-self -Wsuggest-override -Wno-delete-non-virtual-dtor -Wno-comment -Wimplicit-fallthrough=3 -Wno-strict-overflow -fdiagnostics-show-option -Wno-long-long -pthread -fomit-frame-pointer -ffunction-sections -fdata-sections  -msse -msse2 -msse3 -fvisibility=hidden -fvisibility-inlines-hidden -Wno-deprecated -Wno-missing-declarations -Wno-shadow -Wno-unused-parameter -Wno-unused-local-typedefs -Wno-sign-compare -Wno-sign-promo -Wno-undef -Wno-ignored-qualifiers -Wno-extra -Wno-unused-function -Wno-unused-const-variable  -O3 -DNDEBUG  -DNDEBUG -fPIE    -Wno-shorten-64-to-32 -std=c++11 -o CMakeFiles/cmTC_ea440.dir/src.cxx.o -c /home/cai/Dev/rc_smart_cart/orb-slam3-setup/opencv-4.4.0/build/CMakeFiles/CMakeTmp/src.cxx
+/home/cai/Dev/rc_smart_cart/orb-slam3-setup/opencv-4.4.0/build/CMakeFiles/CMakeTmp/src.cxx:1: warning: ignoring #pragma   [-Wunknown-pragmas]
+    1 | #pragma
+      | 
+cc1plus: warning: unrecognized command line option ‘-Wno-shorten-64-to-32’
+Linking CXX executable cmTC_ea440
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_ea440.dir/link.txt --verbose=1
+/usr/bin/c++     -fsigned-char -W -Wall -Werror=return-type -Werror=non-virtual-dtor -Werror=address -Werror=sequence-point -Wformat -Werror=format-security -Winit-self -Wpointer-arith -Wuninitialized -Winit-self -Wsuggest-override -Wno-delete-non-virtual-dtor -Wno-comment -Wimplicit-fallthrough=3 -Wno-strict-overflow -fdiagnostics-show-option -Wno-long-long -pthread -fomit-frame-pointer -ffunction-sections -fdata-sections  -msse -msse2 -msse3 -fvisibility=hidden -fvisibility-inlines-hidden -Wno-deprecated -Wno-missing-declarations -Wno-shadow -Wno-unused-parameter -Wno-unused-local-typedefs -Wno-sign-compare -Wno-sign-promo -Wno-undef -Wno-ignored-qualifiers -Wno-extra -Wno-unused-function -Wno-unused-const-variable  -O3 -DNDEBUG  -DNDEBUG    -Wl,--gc-sections -Wl,--as-needed  CMakeFiles/cmTC_ea440.dir/src.cxx.o  -o cmTC_ea440 
+make[1]: Leaving directory '/home/cai/Dev/rc_smart_cart/orb-slam3-setup/opencv-4.4.0/build/CMakeFiles/CMakeTmp'
+
+
+===== END =====
+
+Build output check failed:
+    Regex: 'unrecognized .*option'
+    Output line: 'cc1plus: warning: unrecognized command line option ‘-Wno-enum-compare-switch’'
+Compilation failed:
+    source file: '/home/cai/Dev/rc_smart_cart/orb-slam3-setup/opencv-4.4.0/build/CMakeFiles/CMakeTmp/src.cxx'
+    check option: ' -Wno-enum-compare-switch'
+===== BUILD LOG =====
+Change Dir: /home/cai/Dev/rc_smart_cart/orb-slam3-setup/opencv-4.4.0/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_40140/fast && /usr/bin/make -f CMakeFiles/cmTC_40140.dir/build.make CMakeFiles/cmTC_40140.dir/build
+make[1]: Entering directory '/home/cai/Dev/rc_smart_cart/orb-slam3-setup/opencv-4.4.0/build/CMakeFiles/CMakeTmp'
+Building CXX object CMakeFiles/cmTC_40140.dir/src.cxx.o
+/usr/bin/c++    -fsigned-char -W -Wall -Werror=return-type -Werror=non-virtual-dtor -Werror=address -Werror=sequence-point -Wformat -Werror=format-security -Winit-self -Wpointer-arith -Wuninitialized -Winit-self -Wsuggest-override -Wno-delete-non-virtual-dtor -Wno-comment -Wimplicit-fallthrough=3 -Wno-strict-overflow -fdiagnostics-show-option -Wno-long-long -pthread -fomit-frame-pointer -ffunction-sections -fdata-sections  -msse -msse2 -msse3 -fvisibility=hidden -fvisibility-inlines-hidden -Wno-deprecated -Wno-missing-declarations -Wno-shadow -Wno-unused-parameter -Wno-unused-local-typedefs -Wno-sign-compare -Wno-sign-promo -Wno-undef -Wno-ignored-qualifiers -Wno-extra -Wno-unused-function -Wno-unused-const-variable -Wno-invalid-offsetof  -O3 -DNDEBUG  -DNDEBUG -fPIE    -Wno-enum-compare-switch -std=c++11 -o CMakeFiles/cmTC_40140.dir/src.cxx.o -c /home/cai/Dev/rc_smart_cart/orb-slam3-setup/opencv-4.4.0/build/CMakeFiles/CMakeTmp/src.cxx
+/home/cai/Dev/rc_smart_cart/orb-slam3-setup/opencv-4.4.0/build/CMakeFiles/CMakeTmp/src.cxx:1: warning: ignoring #pragma   [-Wunknown-pragmas]
+    1 | #pragma
+      | 
+cc1plus: warning: unrecognized command line option ‘-Wno-enum-compare-switch’
+Linking CXX executable cmTC_40140
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_40140.dir/link.txt --verbose=1
+/usr/bin/c++     -fsigned-char -W -Wall -Werror=return-type -Werror=non-virtual-dtor -Werror=address -Werror=sequence-point -Wformat -Werror=format-security -Winit-self -Wpointer-arith -Wuninitialized -Winit-self -Wsuggest-override -Wno-delete-non-virtual-dtor -Wno-comment -Wimplicit-fallthrough=3 -Wno-strict-overflow -fdiagnostics-show-option -Wno-long-long -pthread -fomit-frame-pointer -ffunction-sections -fdata-sections  -msse -msse2 -msse3 -fvisibility=hidden -fvisibility-inlines-hidden -Wno-deprecated -Wno-missing-declarations -Wno-shadow -Wno-unused-parameter -Wno-unused-local-typedefs -Wno-sign-compare -Wno-sign-promo -Wno-undef -Wno-ignored-qualifiers -Wno-extra -Wno-unused-function -Wno-unused-const-variable -Wno-invalid-offsetof  -O3 -DNDEBUG  -DNDEBUG    -Wl,--gc-sections -Wl,--as-needed  CMakeFiles/cmTC_40140.dir/src.cxx.o  -o cmTC_40140 
+make[1]: Leaving directory '/home/cai/Dev/rc_smart_cart/orb-slam3-setup/opencv-4.4.0/build/CMakeFiles/CMakeTmp'
+
+
+===== END =====
+
+Build output check failed:
+    Regex: 'unrecognized .*option'
+    Output line: 'cc1plus: warning: unrecognized command line option ‘-Wno-inconsistent-missing-override’'
+Compilation failed:
+    source file: '/home/cai/Dev/rc_smart_cart/orb-slam3-setup/opencv-4.4.0/build/CMakeFiles/CMakeTmp/src.cxx'
+    check option: ' -Wno-inconsistent-missing-override'
+===== BUILD LOG =====
+Change Dir: /home/cai/Dev/rc_smart_cart/orb-slam3-setup/opencv-4.4.0/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_0173f/fast && /usr/bin/make -f CMakeFiles/cmTC_0173f.dir/build.make CMakeFiles/cmTC_0173f.dir/build
+make[1]: Entering directory '/home/cai/Dev/rc_smart_cart/orb-slam3-setup/opencv-4.4.0/build/CMakeFiles/CMakeTmp'
+Building CXX object CMakeFiles/cmTC_0173f.dir/src.cxx.o
+/usr/bin/c++    -fsigned-char -W -Wall -Werror=return-type -Werror=non-virtual-dtor -Werror=address -Werror=sequence-point -Wformat -Werror=format-security -Winit-self -Wpointer-arith -Wuninitialized -Winit-self -Wno-delete-non-virtual-dtor -Wno-comment -Wimplicit-fallthrough=3 -Wno-strict-overflow -fdiagnostics-show-option -Wno-long-long -pthread -fomit-frame-pointer -ffunction-sections -fdata-sections  -msse -msse2 -msse3 -fvisibility=hidden -fvisibility-inlines-hidden -Wno-deprecated -Wno-missing-declarations -Wno-shadow -Wno-unused-parameter -Wno-unused-local-typedefs -Wno-sign-compare -Wno-sign-promo -Wno-undef -Wno-ignored-qualifiers -Wno-extra -Wno-unused-function -Wno-unused-const-variable -Wno-invalid-offsetof -Wno-suggest-override  -O3 -DNDEBUG  -DNDEBUG -fPIE    -Wno-inconsistent-missing-override -std=c++11 -o CMakeFiles/cmTC_0173f.dir/src.cxx.o -c /home/cai/Dev/rc_smart_cart/orb-slam3-setup/opencv-4.4.0/build/CMakeFiles/CMakeTmp/src.cxx
+/home/cai/Dev/rc_smart_cart/orb-slam3-setup/opencv-4.4.0/build/CMakeFiles/CMakeTmp/src.cxx:1: warning: ignoring #pragma   [-Wunknown-pragmas]
+    1 | #pragma
+      | 
+cc1plus: warning: unrecognized command line option ‘-Wno-inconsistent-missing-override’
+Linking CXX executable cmTC_0173f
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_0173f.dir/link.txt --verbose=1
+/usr/bin/c++     -fsigned-char -W -Wall -Werror=return-type -Werror=non-virtual-dtor -Werror=address -Werror=sequence-point -Wformat -Werror=format-security -Winit-self -Wpointer-arith -Wuninitialized -Winit-self -Wno-delete-non-virtual-dtor -Wno-comment -Wimplicit-fallthrough=3 -Wno-strict-overflow -fdiagnostics-show-option -Wno-long-long -pthread -fomit-frame-pointer -ffunction-sections -fdata-sections  -msse -msse2 -msse3 -fvisibility=hidden -fvisibility-inlines-hidden -Wno-deprecated -Wno-missing-declarations -Wno-shadow -Wno-unused-parameter -Wno-unused-local-typedefs -Wno-sign-compare -Wno-sign-promo -Wno-undef -Wno-ignored-qualifiers -Wno-extra -Wno-unused-function -Wno-unused-const-variable -Wno-invalid-offsetof -Wno-suggest-override  -O3 -DNDEBUG  -DNDEBUG    -Wl,--gc-sections -Wl,--as-needed  CMakeFiles/cmTC_0173f.dir/src.cxx.o  -o cmTC_0173f 
+make[1]: Leaving directory '/home/cai/Dev/rc_smart_cart/orb-slam3-setup/opencv-4.4.0/build/CMakeFiles/CMakeTmp'
+
+
+===== END =====
+
+Determining if the include file sys/videoio.h exists failed with the following output:
+Change Dir: /home/cai/Dev/rc_smart_cart/orb-slam3-setup/opencv-4.4.0/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_6c5fb/fast && /usr/bin/make -f CMakeFiles/cmTC_6c5fb.dir/build.make CMakeFiles/cmTC_6c5fb.dir/build
+make[1]: Entering directory '/home/cai/Dev/rc_smart_cart/orb-slam3-setup/opencv-4.4.0/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_6c5fb.dir/CheckIncludeFile.c.o
+/usr/bin/cc   -fsigned-char -W -Wall -Werror=return-type -Werror=address -Werror=sequence-point -Wformat -Werror=format-security -Wmissing-declarations -Wmissing-prototypes -Wstrict-prototypes -Wundef -Winit-self -Wpointer-arith -Wshadow -Wuninitialized -Winit-self -Wno-comment -Wimplicit-fallthrough=3 -Wno-strict-overflow -fdiagnostics-show-option -Wno-long-long -pthread -fomit-frame-pointer -ffunction-sections -fdata-sections  -msse -msse2 -msse3 -fvisibility=hidden  -O3 -DNDEBUG  -DNDEBUG -fPIE   -o CMakeFiles/cmTC_6c5fb.dir/CheckIncludeFile.c.o   -c /home/cai/Dev/rc_smart_cart/orb-slam3-setup/opencv-4.4.0/build/CMakeFiles/CMakeTmp/CheckIncludeFile.c
+/home/cai/Dev/rc_smart_cart/orb-slam3-setup/opencv-4.4.0/build/CMakeFiles/CMakeTmp/CheckIncludeFile.c:1:10: fatal error: sys/videoio.h: No such file or directory
+    1 | #include <sys/videoio.h>
+      |          ^~~~~~~~~~~~~~~
+compilation terminated.
+make[1]: *** [CMakeFiles/cmTC_6c5fb.dir/build.make:66: CMakeFiles/cmTC_6c5fb.dir/CheckIncludeFile.c.o] Error 1
+make[1]: Leaving directory '/home/cai/Dev/rc_smart_cart/orb-slam3-setup/opencv-4.4.0/build/CMakeFiles/CMakeTmp'
+make: *** [Makefile:121: cmTC_6c5fb/fast] Error 2
+
+
+

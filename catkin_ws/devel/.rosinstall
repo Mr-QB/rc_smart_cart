@@ -1,0 +1,2 @@
+- setup-file:
+    local-name: /home/cai/Dev/rc_smart_cart/catkin_ws/devel/setup.sh

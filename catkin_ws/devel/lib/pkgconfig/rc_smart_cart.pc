@@ -1,0 +1,8 @@
+prefix=/home/cai/Dev/rc_smart_cart/catkin_ws/devel
+
+Name: rc_smart_cart
+Description: Description of rc_smart_cart
+Version: 0.0.0
+Cflags: 
+Libs: -L${prefix}/lib 
+Requires: 

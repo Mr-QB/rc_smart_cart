@@ -1,0 +1,17 @@
+<launch>
+   <node pkg="rc_smart_cart" type="motor_node.py" name="motor_controller_node" output="screen">
+        <param name="port" value="/dev/ttyACM0"/>
+        <param name="baudrate" value="115200"/>
+    </node>
+
+    <node pkg="rc_smart_cart" type="odom_serial_node.py" name="odom_serial_node" output="screen">
+        <param name="port" value="/dev/ttyACM0"/>
+        <param name="baudrate" value="115200"/>
+    </node>
+
+
+</launch>
+
+
+<!-- catkin_make -DPYTHON_EXECUTABLE=/usr/bin/python3 -->
+
