@@ -1,0 +1,19 @@
+-- libpng Found and Enabled
+-- libjpeg Found and Enabled
+-- libtiff Found and Enabled
+-- libopenexr Found and Enabled
+-- liblz4 Found and Enabled
+-- libzstd Found and Enabled
+-- Found Eigen: '/usr/include/eigen3'
+CMake Error at /usr/share/cmake-3.16/Modules/FindPackageHandleStandardArgs.cmake:146 (message):
+  Could NOT find epoxy (missing: epoxy_LIBRARIES epoxy_INCLUDE_DIRS)
+Call Stack (most recent call first):
+  /usr/share/cmake-3.16/Modules/FindPackageHandleStandardArgs.cmake:393 (_FPHSA_FAILURE_MESSAGE)
+  cmake/Findepoxy.cmake:63 (find_package_handle_standard_args)
+  components/pango_opengl/CMakeLists.txt:50 (find_package)
+  CMakeLists.txt:111 (include)
+
+
+-- Configuring incomplete, errors occurred!
+See also "/home/cai/Dev/rc_smart_cart/orb-slam3-setup/pangolin/build/CMakeFiles/CMakeOutput.log".
+See also "/home/cai/Dev/rc_smart_cart/orb-slam3-setup/pangolin/build/CMakeFiles/CMakeError.log".
