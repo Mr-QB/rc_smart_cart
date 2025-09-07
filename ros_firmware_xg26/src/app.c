@@ -26,6 +26,7 @@ void app_init(void)
   motor_control_init();
   encoder_init();
   odometry_init();
+  imu_init();
 }
 
 /***************************************************************************//**
@@ -33,10 +34,10 @@ void app_init(void)
  ******************************************************************************/
 void app_process_action(void)
 {
-  motor1_set_target_speed(.3f);
+
+  read_wheel_velocity();
   motor_control_update();
   encoder_update_speed();
   odometry_update();
   odometry_send_uart();
-
 }

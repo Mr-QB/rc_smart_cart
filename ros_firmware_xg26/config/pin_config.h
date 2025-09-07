@@ -112,6 +112,38 @@
 // [TIMER9]$
 
 // $[EUSART1]
+// EUSART1 CS on PC00
+#ifndef EUSART1_CS_PORT                         
+#define EUSART1_CS_PORT                          SL_GPIO_PORT_C
+#endif
+#ifndef EUSART1_CS_PIN                          
+#define EUSART1_CS_PIN                           0
+#endif
+
+// EUSART1 RX on PC02
+#ifndef EUSART1_RX_PORT                         
+#define EUSART1_RX_PORT                          SL_GPIO_PORT_C
+#endif
+#ifndef EUSART1_RX_PIN                          
+#define EUSART1_RX_PIN                           2
+#endif
+
+// EUSART1 SCLK on PC01
+#ifndef EUSART1_SCLK_PORT                       
+#define EUSART1_SCLK_PORT                        SL_GPIO_PORT_C
+#endif
+#ifndef EUSART1_SCLK_PIN                        
+#define EUSART1_SCLK_PIN                         1
+#endif
+
+// EUSART1 TX on PC03
+#ifndef EUSART1_TX_PORT                         
+#define EUSART1_TX_PORT                          SL_GPIO_PORT_C
+#endif
+#ifndef EUSART1_TX_PIN                          
+#define EUSART1_TX_PIN                           3
+#endif
+
 // [EUSART1]$
 
 // $[EUSART2]
@@ -215,6 +247,13 @@
 #endif
 #ifndef _PIN                                    
 #define _PIN                                     0
+#endif
+
+#ifndef SENSOR_ENABLE_GPIO_PIN_PORT             
+#define SENSOR_ENABLE_GPIO_PIN_PORT              SL_GPIO_PORT_B
+#endif
+#ifndef SENSOR_ENABLE_GPIO_PIN_PIN              
+#define SENSOR_ENABLE_GPIO_PIN_PIN               1
 #endif
 
 // [CUSTOM_PIN_NAME]$

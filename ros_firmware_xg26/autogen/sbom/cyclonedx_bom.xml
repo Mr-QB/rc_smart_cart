@@ -10,7 +10,7 @@ referenced in this SBOM.)
 -->
 <bom xmlns="http://cyclonedx.org/schema/bom/1.6" version="1">
   <metadata>
-    <timestamp>2025-08-08T04:01:00.316334Z</timestamp>
+    <timestamp>2025-09-04T04:47:29.425580900Z</timestamp>
     <authors>
       <author>
         <name>Silicon Laboratories, Inc.</name>
@@ -65,6 +65,26 @@ referenced in this SBOM.)
             <expression>Zlib</expression>
           </licenses>
         </component>
+        <component bom-ref="simplicity_sdk:2025.6.0:gpiointerrupt" type="library">
+          <name>GPIOINT</name>
+          <version>2025.6.0</version>
+	      <supplier>
+	        <name>Silicon Laboratories, Inc.</name>
+	      </supplier>
+          <licenses>
+            <expression>Zlib</expression>
+          </licenses>
+        </component>
+        <component bom-ref="simplicity_sdk:2025.6.0:icm40627_driver" type="library">
+          <name>ICM40627 - Motion Sensor</name>
+          <version>2025.6.0</version>
+	      <supplier>
+	        <name>Silicon Laboratories, Inc.</name>
+	      </supplier>
+          <licenses>
+            <expression>Zlib</expression>
+          </licenses>
+        </component>
         <component bom-ref="simplicity_sdk:2025.6.0:iostream_usart" type="library">
           <name>IO Stream: USART</name>
           <version>2025.6.0</version>
@@ -85,8 +105,28 @@ referenced in this SBOM.)
             <expression>Zlib</expression>
           </licenses>
         </component>
+        <component bom-ref="simplicity_sdk:2025.6.0:sleeptimer" type="library">
+          <name>Sleep Timer</name>
+          <version>2025.6.0</version>
+	      <supplier>
+	        <name>Silicon Laboratories, Inc.</name>
+	      </supplier>
+          <licenses>
+            <expression>Zlib</expression>
+          </licenses>
+        </component>
         <component bom-ref="simplicity_sdk:2025.6.0:dmadrv_core" type="library">
           <name>DMADRV Core</name>
+          <version>2025.6.0</version>
+	      <supplier>
+	        <name>Silicon Laboratories, Inc.</name>
+	      </supplier>
+          <licenses>
+            <expression>Zlib</expression>
+          </licenses>
+        </component>
+        <component bom-ref="simplicity_sdk:2025.6.0:device_manager" type="library">
+          <name>Device Manager</name>
           <version>2025.6.0</version>
 	      <supplier>
 	        <name>Silicon Laboratories, Inc.</name>
@@ -105,8 +145,8 @@ referenced in this SBOM.)
             <expression>Zlib</expression>
           </licenses>
         </component>
-        <component bom-ref="simplicity_sdk:2025.6.0:device_init_core" type="library">
-          <name>Core</name>
+        <component bom-ref="simplicity_sdk:2025.6.0:emlib_eusart" type="library">
+          <name>EUSART</name>
           <version>2025.6.0</version>
 	      <supplier>
 	        <name>Silicon Laboratories, Inc.</name>
@@ -115,8 +155,8 @@ referenced in this SBOM.)
             <expression>Zlib</expression>
           </licenses>
         </component>
-        <component bom-ref="simplicity_sdk:2025.6.0:emlib_eusart" type="library">
-          <name>EUSART</name>
+        <component bom-ref="simplicity_sdk:2025.6.0:device_init_core" type="library">
+          <name>Core</name>
           <version>2025.6.0</version>
 	      <supplier>
 	        <name>Silicon Laboratories, Inc.</name>
@@ -197,6 +237,16 @@ referenced in this SBOM.)
         </component>
         <component bom-ref="simplicity_sdk:2025.6.0:emlib_msc" type="library">
           <name>MSC</name>
+          <version>2025.6.0</version>
+	      <supplier>
+	        <name>Silicon Laboratories, Inc.</name>
+	      </supplier>
+          <licenses>
+            <expression>Zlib</expression>
+          </licenses>
+        </component>
+        <component bom-ref="simplicity_sdk:2025.6.0:device_i2c" type="library">
+          <name>Device Manager I2C</name>
           <version>2025.6.0</version>
 	      <supplier>
 	        <name>Silicon Laboratories, Inc.</name>
@@ -445,6 +495,16 @@ referenced in this SBOM.)
             <expression>Zlib</expression>
           </licenses>
         </component>
+        <component bom-ref="simplicity_sdk:2025.6.0:emlib_burtc" type="library">
+          <name>BURTC</name>
+          <version>2025.6.0</version>
+	      <supplier>
+	        <name>Silicon Laboratories, Inc.</name>
+	      </supplier>
+          <licenses>
+            <expression>Zlib</expression>
+          </licenses>
+        </component>
         <component bom-ref="simplicity_sdk:2025.6.0:emlib_syscfg" type="library">
           <name>SYSCFG</name>
           <version>2025.6.0</version>
@@ -497,6 +557,16 @@ referenced in this SBOM.)
         </component>
         <component bom-ref="simplicity_sdk:2025.6.0:emlib_common" type="library">
           <name>Common Headers</name>
+          <version>2025.6.0</version>
+	      <supplier>
+	        <name>Silicon Laboratories, Inc.</name>
+	      </supplier>
+          <licenses>
+            <expression>Zlib</expression>
+          </licenses>
+        </component>
+        <component bom-ref="simplicity_sdk:2025.6.0:device_peripheral_hal" type="library">
+          <name>Device Manager Peripheral HAL</name>
           <version>2025.6.0</version>
 	      <supplier>
 	        <name>Silicon Laboratories, Inc.</name>
@@ -565,8 +635,38 @@ referenced in this SBOM.)
             <expression>Zlib</expression>
           </licenses>
         </component>
+        <component bom-ref="simplicity_sdk:2025.6.0:hal_sysrtc" type="library">
+          <name>SYSRTC</name>
+          <version>2025.6.0</version>
+	      <supplier>
+	        <name>Silicon Laboratories, Inc.</name>
+	      </supplier>
+          <licenses>
+            <expression>Zlib</expression>
+          </licenses>
+        </component>
         <component bom-ref="simplicity_sdk:2025.6.0:iostream_uart_common" type="library">
           <name>IO Stream: Common code for UART-type streams</name>
+          <version>2025.6.0</version>
+	      <supplier>
+	        <name>Silicon Laboratories, Inc.</name>
+	      </supplier>
+          <licenses>
+            <expression>Zlib</expression>
+          </licenses>
+        </component>
+        <component bom-ref="simplicity_sdk:2025.6.0:emlib_timer" type="library">
+          <name>TIMER</name>
+          <version>2025.6.0</version>
+	      <supplier>
+	        <name>Silicon Laboratories, Inc.</name>
+	      </supplier>
+          <licenses>
+            <expression>Zlib</expression>
+          </licenses>
+        </component>
+        <component bom-ref="simplicity_sdk:2025.6.0:emlib_prs" type="library">
+          <name>PRS</name>
           <version>2025.6.0</version>
 	      <supplier>
 	        <name>Silicon Laboratories, Inc.</name>
@@ -605,6 +705,16 @@ referenced in this SBOM.)
             <expression>Zlib</expression>
           </licenses>
         </component>
+        <component bom-ref="simplicity_sdk:2025.6.0:device_peripheral" type="library">
+          <name>Device Manager Peripheral</name>
+          <version>2025.6.0</version>
+	      <supplier>
+	        <name>Silicon Laboratories, Inc.</name>
+	      </supplier>
+          <licenses>
+            <expression>Zlib</expression>
+          </licenses>
+        </component>
         <component bom-ref="simplicity_sdk:2025.6.0:sl_main_init" type="library">
           <name>sl main Init</name>
           <version>2025.6.0</version>
@@ -635,8 +745,8 @@ referenced in this SBOM.)
             <expression>Zlib</expression>
           </licenses>
         </component>
-        <component bom-ref="simplicity_sdk:2025.6.0:sleeptimer" type="library">
-          <name>Sleep Timer</name>
+        <component bom-ref="simplicity_sdk:2025.6.0:imu_driver_icm40627" type="library">
+          <name>IMU - Device driver for InvenSense ICM-40627</name>
           <version>2025.6.0</version>
 	      <supplier>
 	        <name>Silicon Laboratories, Inc.</name>
@@ -645,88 +755,8 @@ referenced in this SBOM.)
             <expression>Zlib</expression>
           </licenses>
         </component>
-        <component bom-ref="simplicity_sdk:2025.6.0:device_manager" type="library">
-          <name>Device Manager</name>
-          <version>2025.6.0</version>
-	      <supplier>
-	        <name>Silicon Laboratories, Inc.</name>
-	      </supplier>
-          <licenses>
-            <expression>Zlib</expression>
-          </licenses>
-        </component>
-        <component bom-ref="simplicity_sdk:2025.6.0:device_i2c" type="library">
-          <name>Device Manager I2C</name>
-          <version>2025.6.0</version>
-	      <supplier>
-	        <name>Silicon Laboratories, Inc.</name>
-	      </supplier>
-          <licenses>
-            <expression>Zlib</expression>
-          </licenses>
-        </component>
-        <component bom-ref="simplicity_sdk:2025.6.0:emlib_burtc" type="library">
-          <name>BURTC</name>
-          <version>2025.6.0</version>
-	      <supplier>
-	        <name>Silicon Laboratories, Inc.</name>
-	      </supplier>
-          <licenses>
-            <expression>Zlib</expression>
-          </licenses>
-        </component>
-        <component bom-ref="simplicity_sdk:2025.6.0:device_peripheral_hal" type="library">
-          <name>Device Manager Peripheral HAL</name>
-          <version>2025.6.0</version>
-	      <supplier>
-	        <name>Silicon Laboratories, Inc.</name>
-	      </supplier>
-          <licenses>
-            <expression>Zlib</expression>
-          </licenses>
-        </component>
-        <component bom-ref="simplicity_sdk:2025.6.0:hal_sysrtc" type="library">
-          <name>SYSRTC</name>
-          <version>2025.6.0</version>
-	      <supplier>
-	        <name>Silicon Laboratories, Inc.</name>
-	      </supplier>
-          <licenses>
-            <expression>Zlib</expression>
-          </licenses>
-        </component>
-        <component bom-ref="simplicity_sdk:2025.6.0:emlib_timer" type="library">
-          <name>TIMER</name>
-          <version>2025.6.0</version>
-	      <supplier>
-	        <name>Silicon Laboratories, Inc.</name>
-	      </supplier>
-          <licenses>
-            <expression>Zlib</expression>
-          </licenses>
-        </component>
-        <component bom-ref="simplicity_sdk:2025.6.0:emlib_prs" type="library">
-          <name>PRS</name>
-          <version>2025.6.0</version>
-	      <supplier>
-	        <name>Silicon Laboratories, Inc.</name>
-	      </supplier>
-          <licenses>
-            <expression>Zlib</expression>
-          </licenses>
-        </component>
-        <component bom-ref="simplicity_sdk:2025.6.0:device_peripheral" type="library">
-          <name>Device Manager Peripheral</name>
-          <version>2025.6.0</version>
-	      <supplier>
-	        <name>Silicon Laboratories, Inc.</name>
-	      </supplier>
-          <licenses>
-            <expression>Zlib</expression>
-          </licenses>
-        </component>
-        <component bom-ref="simplicity_sdk:2025.6.0:gpiointerrupt" type="library">
-          <name>GPIOINT</name>
+        <component bom-ref="simplicity_sdk:2025.6.0:imu_driver_core" type="library">
+          <name>IMU - Inertial Measurement Unit Core</name>
           <version>2025.6.0</version>
 	      <supplier>
 	        <name>Silicon Laboratories, Inc.</name>

@@ -30,6 +30,8 @@ component:
 - {id: clock_manager}
 - {id: device_init}
 - {id: gpiointerrupt}
+- {id: icm40627_driver}
+- {id: imu_driver_icm40627}
 - instance: [vcom]
   id: iostream_usart
 - {id: sl_main}

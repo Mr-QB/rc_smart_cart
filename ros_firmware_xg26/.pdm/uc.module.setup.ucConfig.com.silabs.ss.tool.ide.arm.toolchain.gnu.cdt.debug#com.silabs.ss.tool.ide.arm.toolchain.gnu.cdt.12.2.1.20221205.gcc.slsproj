@@ -4,6 +4,7 @@
     <file name="sl_memory_manager_region_config.h" generated="true" linked="false"/>
     <file name="sl_clock_manager_oscillator_config.h" generated="true" linked="false"/>
     <file name="sl_clock_manager_tree_config.h" generated="true" linked="false"/>
+    <file name="sl_icm40627_config.h" generated="true" linked="false"/>
     <file name="sl_iostream_usart_vcom_config.h" generated="true" linked="false"/>
     <file name="sl_sleeptimer_config.h" generated="true" linked="false"/>
     <file name="sl_board_control_config.h" generated="true" linked="false"/>

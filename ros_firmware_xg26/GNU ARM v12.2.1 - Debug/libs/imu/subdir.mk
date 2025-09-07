@@ -1,0 +1,24 @@
+################################################################################
+# Automatically-generated file. Do not edit!
+################################################################################
+
+# Add inputs and outputs from these tool invocations to the build variables 
+C_SRCS += \
+../libs/imu/icm40627.c 
+
+OBJS += \
+./libs/imu/icm40627.o 
+
+C_DEPS += \
+./libs/imu/icm40627.d 
+
+
+# Each subdirectory must supply rules for building sources it contributes
+libs/imu/icm40627.o: ../libs/imu/icm40627.c libs/imu/subdir.mk
+	@echo 'Building file: $<'
+	@echo 'Invoking: GNU ARM C Compiler'
+	arm-none-eabi-gcc -g -gdwarf-2 -mcpu=cortex-m33 -mthumb -std=c18 '-DDEBUG=1' '-DDEBUG_EFM=1' '-DEFR32MG26B510F3200IM68=1' '-DSL_CODE_COMPONENT_SYSTEM=system' '-DHARDWARE_BOARD_DEFAULT_RF_BAND_2400=1' '-DHARDWARE_BOARD_SUPPORTS_1_RF_BAND=1' '-DHARDWARE_BOARD_SUPPORTS_RF_BAND_2400=1' '-DHFXO_FREQ=39000000' '-DSL_BOARD_NAME="BRD2608A"' '-DSL_BOARD_REV="A04"' '-DSL_CODE_COMPONENT_CLOCK_MANAGER=clock_manager' '-DSL_COMPONENT_CATALOG_PRESENT=1' '-DSL_CODE_COMPONENT_DEVICE_PERIPHERAL=device_peripheral' '-DSL_CODE_COMPONENT_DMADRV=dmadrv' '-DSL_CODE_COMPONENT_GPIO=gpio' '-DSL_CODE_COMPONENT_HAL_COMMON=hal_common' '-DSL_CODE_COMPONENT_HAL_GPIO=hal_gpio' '-DSL_CODE_COMPONENT_HAL_SYSRTC=hal_sysrtc' '-DSL_CODE_COMPONENT_INTERRUPT_MANAGER=interrupt_manager' '-DCMSIS_NVIC_VIRTUAL=1' '-DCMSIS_NVIC_VIRTUAL_HEADER_FILE="cmsis_nvic_virtual.h"' '-DSL_CODE_COMPONENT_CORE=core' '-DSL_CODE_COMPONENT_SLEEPTIMER=sleeptimer' -I"C:\Users\Cai\SimplicityStudio\v5_workspace\ros_firmware_xg26\config" -I"C:\Users\Cai\SimplicityStudio\v5_workspace\ros_firmware_xg26\autogen" -I"C:\Users\Cai\SimplicityStudio\v5_workspace\ros_firmware_xg26" -I"C:/Users/Cai/SimplicityStudio/SDKs/simplicity_sdk//platform/Device/SiliconLabs/EFR32MG26/Include" -I"C:/Users/Cai/SimplicityStudio/SDKs/simplicity_sdk//platform/common/inc" -I"C:/Users/Cai/SimplicityStudio/SDKs/simplicity_sdk//hardware/board/inc" -I"C:/Users/Cai/SimplicityStudio/SDKs/simplicity_sdk//platform/service/clock_manager/inc" -I"C:/Users/Cai/SimplicityStudio/SDKs/simplicity_sdk//platform/service/clock_manager/src" -I"C:/Users/Cai/SimplicityStudio/SDKs/simplicity_sdk//platform/CMSIS/Core/Include" -I"C:/Users/Cai/SimplicityStudio/SDKs/simplicity_sdk//hardware/driver/configuration_over_swo/inc" -I"C:/Users/Cai/SimplicityStudio/SDKs/simplicity_sdk//platform/driver/debug/inc" -I"C:/Users/Cai/SimplicityStudio/SDKs/simplicity_sdk//platform/service/device_manager/inc" -I"C:/Users/Cai/SimplicityStudio/SDKs/simplicity_sdk//platform/service/device_init/inc" -I"C:/Users/Cai/SimplicityStudio/SDKs/simplicity_sdk//platform/emdrv/dmadrv/inc" -I"C:/Users/Cai/SimplicityStudio/SDKs/simplicity_sdk//platform/emdrv/dmadrv/inc/s2_signals" -I"C:/Users/Cai/SimplicityStudio/SDKs/simplicity_sdk//platform/emdrv/common/inc" -I"C:/Users/Cai/SimplicityStudio/SDKs/simplicity_sdk//platform/emlib/inc" -I"C:/Users/Cai/SimplicityStudio/SDKs/simplicity_sdk//platform/driver/gpio/inc" -I"C:/Users/Cai/SimplicityStudio/SDKs/simplicity_sdk//platform/emdrv/gpiointerrupt/inc" -I"C:/Users/Cai/SimplicityStudio/SDKs/simplicity_sdk//platform/peripheral/inc" -I"C:/Users/Cai/SimplicityStudio/SDKs/simplicity_sdk//hardware/driver/icm40627/inc" -I"C:/Users/Cai/SimplicityStudio/SDKs/simplicity_sdk//hardware/driver/imu/inc" -I"C:/Users/Cai/SimplicityStudio/SDKs/simplicity_sdk//platform/service/interrupt_manager/inc" -I"C:/Users/Cai/SimplicityStudio/SDKs/simplicity_sdk//platform/service/interrupt_manager/src" -I"C:/Users/Cai/SimplicityStudio/SDKs/simplicity_sdk//platform/service/interrupt_manager/inc/arm" -I"C:/Users/Cai/SimplicityStudio/SDKs/simplicity_sdk//platform/service/iostream/inc" -I"C:/Users/Cai/SimplicityStudio/SDKs/simplicity_sdk//platform/service/memory_manager/inc" -I"C:/Users/Cai/SimplicityStudio/SDKs/simplicity_sdk//hardware/driver/mx25_flash_shutdown/inc/sl_mx25_flash_shutdown_eusart" -I"C:/Users/Cai/SimplicityStudio/SDKs/simplicity_sdk//platform/service/sl_main/inc" -I"C:/Users/Cai/SimplicityStudio/SDKs/simplicity_sdk//platform/service/sl_main/src" -I"C:/Users/Cai/SimplicityStudio/SDKs/simplicity_sdk//platform/service/sleeptimer/inc" -I"C:/Users/Cai/SimplicityStudio/SDKs/simplicity_sdk//platform/service/udelay/inc" -Os -Wall -Wextra -mno-sched-prolog -fno-builtin -ffunction-sections -fdata-sections -mcmse -mfpu=fpv5-sp-d16 -mfloat-abi=hard -fno-lto --specs=nano.specs -c -fmessage-length=0 -MMD -MP -MF"libs/imu/icm40627.d" -MT"$@" -o "$@" "$<"
+	@echo 'Finished building: $<'
+	@echo ' '
+
+

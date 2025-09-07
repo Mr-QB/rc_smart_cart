@@ -3,7 +3,9 @@
 
 #include <stdint.h>
 #include "../libs/encoder/encoder.h"
+#include "../libs/imu/icm40627.h"
 #include "../libs/uart/uart.h"
+#include "../libs/motor_control/motor_control.h"
 #include <math.h>
 #include <stdio.h>
 
@@ -20,6 +22,7 @@ typedef struct {
     float w;      // [rad/s]
     float v_left;
     float v_right;
+    IMU_Data imu_data;
 } odometry_t;
 
 void odometry_init(void);

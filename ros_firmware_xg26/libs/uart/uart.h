@@ -7,8 +7,11 @@
 #include "sl_iostream_handles.h"
 #include "sl_sleeptimer.h"
 
+
 void app_iostream_usart_init(void);
 void app_iostream_usart_process_action(const char *message);
 void uart_send(const char *data, uint16_t len);
+float uart_process_action(void);
+float uart_get_last_v_right(void);
 
 #endif

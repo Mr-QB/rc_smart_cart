@@ -334,6 +334,26 @@
             <file name="sl_cos.h" uri="studio:/sdk/hardware/driver/configuration_over_swo/inc/sl_cos.h"/>
           </folder>
         </folder>
+        <folder name="icm40627">
+          <folder name="src">
+            <file name="sl_icm40627.c" uri="studio:/sdk/hardware/driver/icm40627/src/sl_icm40627.c"/>
+          </folder>
+          <folder name="inc">
+            <file name="sl_icm40627.h" uri="studio:/sdk/hardware/driver/icm40627/inc/sl_icm40627.h"/>
+            <file name="sl_icm40627_defs.h" uri="studio:/sdk/hardware/driver/icm40627/inc/sl_icm40627_defs.h"/>
+          </folder>
+        </folder>
+        <folder name="imu">
+          <folder name="src">
+            <file name="sl_imu_dcm.c" uri="studio:/sdk/hardware/driver/imu/src/sl_imu_dcm.c"/>
+            <file name="sl_imu_fuse.c" uri="studio:/sdk/hardware/driver/imu/src/sl_imu_fuse.c"/>
+            <file name="sl_imu_math.c" uri="studio:/sdk/hardware/driver/imu/src/sl_imu_math.c"/>
+            <file name="sl_imu_icm40627.c" uri="studio:/sdk/hardware/driver/imu/src/sl_imu_icm40627.c"/>
+          </folder>
+          <folder name="inc">
+            <file name="sl_imu.h" uri="studio:/sdk/hardware/driver/imu/inc/sl_imu.h"/>
+          </folder>
+        </folder>
         <folder name="mx25_flash_shutdown">
           <folder name="src">
             <folder name="sl_mx25_flash_shutdown_eusart">
@@ -370,6 +390,8 @@
   <includePath uri="studio:/sdk/platform/driver/gpio/inc"/>
   <includePath uri="studio:/sdk/platform/emdrv/gpiointerrupt/inc"/>
   <includePath uri="studio:/sdk/platform/peripheral/inc"/>
+  <includePath uri="studio:/sdk/hardware/driver/icm40627/inc"/>
+  <includePath uri="studio:/sdk/hardware/driver/imu/inc"/>
   <includePath uri="studio:/sdk/platform/service/interrupt_manager/inc"/>
   <includePath uri="studio:/sdk/platform/service/interrupt_manager/src"/>
   <includePath uri="studio:/sdk/platform/service/interrupt_manager/inc/arm"/>

@@ -3,7 +3,7 @@
   "specVersion" : "1.6",
   "version" : 1,
   "metadata" : {
-    "timestamp" : "2025-08-08T04:01:00.316334Z",
+    "timestamp" : "2025-09-04T04:47:29.425580900Z",
     "authors" : [ {
       "name" : "Silicon Laboratories, Inc."
     } ],
@@ -72,6 +72,30 @@
     }, {
       "scope" : "required",
       "type" : "library",
+      "bom-ref" : "simplicity_sdk:2025.6.0:gpiointerrupt",
+      "name" : "GPIOINT",
+      "version" : "2025.6.0",
+      "supplier" : {
+        "name" : "Silicon Laboratories, Inc."
+      },
+      "licenses" : [ {
+        "expression" : "Zlib"
+      } ]
+    }, {
+      "scope" : "required",
+      "type" : "library",
+      "bom-ref" : "simplicity_sdk:2025.6.0:icm40627_driver",
+      "name" : "ICM40627 - Motion Sensor",
+      "version" : "2025.6.0",
+      "supplier" : {
+        "name" : "Silicon Laboratories, Inc."
+      },
+      "licenses" : [ {
+        "expression" : "Zlib"
+      } ]
+    }, {
+      "scope" : "required",
+      "type" : "library",
       "bom-ref" : "simplicity_sdk:2025.6.0:iostream_usart",
       "name" : "IO Stream: USART",
       "version" : "2025.6.0",
@@ -96,8 +120,32 @@
     }, {
       "scope" : "required",
       "type" : "library",
+      "bom-ref" : "simplicity_sdk:2025.6.0:sleeptimer",
+      "name" : "Sleep Timer",
+      "version" : "2025.6.0",
+      "supplier" : {
+        "name" : "Silicon Laboratories, Inc."
+      },
+      "licenses" : [ {
+        "expression" : "Zlib"
+      } ]
+    }, {
+      "scope" : "required",
+      "type" : "library",
       "bom-ref" : "simplicity_sdk:2025.6.0:dmadrv_core",
       "name" : "DMADRV Core",
+      "version" : "2025.6.0",
+      "supplier" : {
+        "name" : "Silicon Laboratories, Inc."
+      },
+      "licenses" : [ {
+        "expression" : "Zlib"
+      } ]
+    }, {
+      "scope" : "required",
+      "type" : "library",
+      "bom-ref" : "simplicity_sdk:2025.6.0:device_manager",
+      "name" : "Device Manager",
       "version" : "2025.6.0",
       "supplier" : {
         "name" : "Silicon Laboratories, Inc."
@@ -120,8 +168,8 @@
     }, {
       "scope" : "required",
       "type" : "library",
-      "bom-ref" : "simplicity_sdk:2025.6.0:device_init_core",
-      "name" : "Core",
+      "bom-ref" : "simplicity_sdk:2025.6.0:emlib_eusart",
+      "name" : "EUSART",
       "version" : "2025.6.0",
       "supplier" : {
         "name" : "Silicon Laboratories, Inc."
@@ -132,8 +180,8 @@
     }, {
       "scope" : "required",
       "type" : "library",
-      "bom-ref" : "simplicity_sdk:2025.6.0:emlib_eusart",
-      "name" : "EUSART",
+      "bom-ref" : "simplicity_sdk:2025.6.0:device_init_core",
+      "name" : "Core",
       "version" : "2025.6.0",
       "supplier" : {
         "name" : "Silicon Laboratories, Inc."
@@ -230,6 +278,18 @@
       "type" : "library",
       "bom-ref" : "simplicity_sdk:2025.6.0:emlib_msc",
       "name" : "MSC",
+      "version" : "2025.6.0",
+      "supplier" : {
+        "name" : "Silicon Laboratories, Inc."
+      },
+      "licenses" : [ {
+        "expression" : "Zlib"
+      } ]
+    }, {
+      "scope" : "required",
+      "type" : "library",
+      "bom-ref" : "simplicity_sdk:2025.6.0:device_i2c",
+      "name" : "Device Manager I2C",
       "version" : "2025.6.0",
       "supplier" : {
         "name" : "Silicon Laboratories, Inc."
@@ -528,6 +588,18 @@
     }, {
       "scope" : "required",
       "type" : "library",
+      "bom-ref" : "simplicity_sdk:2025.6.0:emlib_burtc",
+      "name" : "BURTC",
+      "version" : "2025.6.0",
+      "supplier" : {
+        "name" : "Silicon Laboratories, Inc."
+      },
+      "licenses" : [ {
+        "expression" : "Zlib"
+      } ]
+    }, {
+      "scope" : "required",
+      "type" : "library",
       "bom-ref" : "simplicity_sdk:2025.6.0:emlib_syscfg",
       "name" : "SYSCFG",
       "version" : "2025.6.0",
@@ -590,6 +662,18 @@
       "type" : "library",
       "bom-ref" : "simplicity_sdk:2025.6.0:emlib_common",
       "name" : "Common Headers",
+      "version" : "2025.6.0",
+      "supplier" : {
+        "name" : "Silicon Laboratories, Inc."
+      },
+      "licenses" : [ {
+        "expression" : "Zlib"
+      } ]
+    }, {
+      "scope" : "required",
+      "type" : "library",
+      "bom-ref" : "simplicity_sdk:2025.6.0:device_peripheral_hal",
+      "name" : "Device Manager Peripheral HAL",
       "version" : "2025.6.0",
       "supplier" : {
         "name" : "Silicon Laboratories, Inc."
@@ -668,8 +752,44 @@
     }, {
       "scope" : "required",
       "type" : "library",
+      "bom-ref" : "simplicity_sdk:2025.6.0:hal_sysrtc",
+      "name" : "SYSRTC",
+      "version" : "2025.6.0",
+      "supplier" : {
+        "name" : "Silicon Laboratories, Inc."
+      },
+      "licenses" : [ {
+        "expression" : "Zlib"
+      } ]
+    }, {
+      "scope" : "required",
+      "type" : "library",
       "bom-ref" : "simplicity_sdk:2025.6.0:iostream_uart_common",
       "name" : "IO Stream: Common code for UART-type streams",
+      "version" : "2025.6.0",
+      "supplier" : {
+        "name" : "Silicon Laboratories, Inc."
+      },
+      "licenses" : [ {
+        "expression" : "Zlib"
+      } ]
+    }, {
+      "scope" : "required",
+      "type" : "library",
+      "bom-ref" : "simplicity_sdk:2025.6.0:emlib_timer",
+      "name" : "TIMER",
+      "version" : "2025.6.0",
+      "supplier" : {
+        "name" : "Silicon Laboratories, Inc."
+      },
+      "licenses" : [ {
+        "expression" : "Zlib"
+      } ]
+    }, {
+      "scope" : "required",
+      "type" : "library",
+      "bom-ref" : "simplicity_sdk:2025.6.0:emlib_prs",
+      "name" : "PRS",
       "version" : "2025.6.0",
       "supplier" : {
         "name" : "Silicon Laboratories, Inc."
@@ -716,6 +836,18 @@
     }, {
       "scope" : "required",
       "type" : "library",
+      "bom-ref" : "simplicity_sdk:2025.6.0:device_peripheral",
+      "name" : "Device Manager Peripheral",
+      "version" : "2025.6.0",
+      "supplier" : {
+        "name" : "Silicon Laboratories, Inc."
+      },
+      "licenses" : [ {
+        "expression" : "Zlib"
+      } ]
+    }, {
+      "scope" : "required",
+      "type" : "library",
       "bom-ref" : "simplicity_sdk:2025.6.0:sl_main_init",
       "name" : "sl main Init",
       "version" : "2025.6.0",
@@ -752,8 +884,8 @@
     }, {
       "scope" : "required",
       "type" : "library",
-      "bom-ref" : "simplicity_sdk:2025.6.0:sleeptimer",
-      "name" : "Sleep Timer",
+      "bom-ref" : "simplicity_sdk:2025.6.0:imu_driver_icm40627",
+      "name" : "IMU - Device driver for InvenSense ICM-40627",
       "version" : "2025.6.0",
       "supplier" : {
         "name" : "Silicon Laboratories, Inc."
@@ -764,104 +896,8 @@
     }, {
       "scope" : "required",
       "type" : "library",
-      "bom-ref" : "simplicity_sdk:2025.6.0:device_manager",
-      "name" : "Device Manager",
-      "version" : "2025.6.0",
-      "supplier" : {
-        "name" : "Silicon Laboratories, Inc."
-      },
-      "licenses" : [ {
-        "expression" : "Zlib"
-      } ]
-    }, {
-      "scope" : "required",
-      "type" : "library",
-      "bom-ref" : "simplicity_sdk:2025.6.0:device_i2c",
-      "name" : "Device Manager I2C",
-      "version" : "2025.6.0",
-      "supplier" : {
-        "name" : "Silicon Laboratories, Inc."
-      },
-      "licenses" : [ {
-        "expression" : "Zlib"
-      } ]
-    }, {
-      "scope" : "required",
-      "type" : "library",
-      "bom-ref" : "simplicity_sdk:2025.6.0:emlib_burtc",
-      "name" : "BURTC",
-      "version" : "2025.6.0",
-      "supplier" : {
-        "name" : "Silicon Laboratories, Inc."
-      },
-      "licenses" : [ {
-        "expression" : "Zlib"
-      } ]
-    }, {
-      "scope" : "required",
-      "type" : "library",
-      "bom-ref" : "simplicity_sdk:2025.6.0:device_peripheral_hal",
-      "name" : "Device Manager Peripheral HAL",
-      "version" : "2025.6.0",
-      "supplier" : {
-        "name" : "Silicon Laboratories, Inc."
-      },
-      "licenses" : [ {
-        "expression" : "Zlib"
-      } ]
-    }, {
-      "scope" : "required",
-      "type" : "library",
-      "bom-ref" : "simplicity_sdk:2025.6.0:hal_sysrtc",
-      "name" : "SYSRTC",
-      "version" : "2025.6.0",
-      "supplier" : {
-        "name" : "Silicon Laboratories, Inc."
-      },
-      "licenses" : [ {
-        "expression" : "Zlib"
-      } ]
-    }, {
-      "scope" : "required",
-      "type" : "library",
-      "bom-ref" : "simplicity_sdk:2025.6.0:emlib_timer",
-      "name" : "TIMER",
-      "version" : "2025.6.0",
-      "supplier" : {
-        "name" : "Silicon Laboratories, Inc."
-      },
-      "licenses" : [ {
-        "expression" : "Zlib"
-      } ]
-    }, {
-      "scope" : "required",
-      "type" : "library",
-      "bom-ref" : "simplicity_sdk:2025.6.0:emlib_prs",
-      "name" : "PRS",
-      "version" : "2025.6.0",
-      "supplier" : {
-        "name" : "Silicon Laboratories, Inc."
-      },
-      "licenses" : [ {
-        "expression" : "Zlib"
-      } ]
-    }, {
-      "scope" : "required",
-      "type" : "library",
-      "bom-ref" : "simplicity_sdk:2025.6.0:device_peripheral",
-      "name" : "Device Manager Peripheral",
-      "version" : "2025.6.0",
-      "supplier" : {
-        "name" : "Silicon Laboratories, Inc."
-      },
-      "licenses" : [ {
-        "expression" : "Zlib"
-      } ]
-    }, {
-      "scope" : "required",
-      "type" : "library",
-      "bom-ref" : "simplicity_sdk:2025.6.0:gpiointerrupt",
-      "name" : "GPIOINT",
+      "bom-ref" : "simplicity_sdk:2025.6.0:imu_driver_core",
+      "name" : "IMU - Inertial Measurement Unit Core",
       "version" : "2025.6.0",
       "supplier" : {
         "name" : "Silicon Laboratories, Inc."

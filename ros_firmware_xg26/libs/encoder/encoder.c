@@ -114,10 +114,10 @@ int32_t encoder2_get_count(void)
 }
 float encoder1_get_speed_mps(void)
 {
-    return speed1_mps;
+    return speed2_mps;
 }
 
 float encoder2_get_speed_mps(void)
 {
-    return speed2_mps;
+    return speed1_mps;
 }

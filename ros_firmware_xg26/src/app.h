@@ -22,6 +22,7 @@
 #include <stdint.h>
 #include<../libs/uart/uart.h>
 #include<../libs/encoder/encoder.h>
+#include <../libs/imu/icm40627.h>
 #include<../libs/motor_control/motor_control.h>
 #include"libs/odometry/odometry.h"
 

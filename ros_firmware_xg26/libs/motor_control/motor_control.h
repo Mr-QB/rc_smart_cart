@@ -17,12 +17,15 @@
 
 
 #include "em_gpio.h"
+#include <math.h>
+
 #include "em_timer.h"
 #include "em_cmu.h"
 #include "em_gpio.h"
 #include "em_timer.h"
 #include "pid.h"
 #include "../encoder/encoder.h"
+#include "../uart/uart.h"
 
 void initCMU(void);
 void initGPIO(void);
@@ -36,6 +39,9 @@ void motor_control_update(void);
 void motor1_set_target_speed(float speed_mps);
 void motor2_set_target_speed(float speed_mps);
 void motor_control_init(void);
+void read_wheel_velocity(void);
+float get_motor1_set_target_speed(void);
+float get_motor2_set_target_speed(void);
 
 extern volatile float dutyCycle1;
 extern volatile float dutyCycle2;
