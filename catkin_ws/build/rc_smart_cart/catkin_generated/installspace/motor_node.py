@@ -27,9 +27,12 @@ class MotorController:
             rospy.logwarn("Expected 2 float values: [v_left, v_right]")
             return
         v_left, v_right = msg.data
+        v_left = max(min(v_left, 0.9), -0.9)
+        v_right = max(min(v_right, 0.9), -0.9)
+
         # Pack floats in little-endian for MCU
         data = struct.pack("<ff", v_left, v_right)
-        self.ser.write(b"\xaa" + data)
+        self.ser.write(b"\xaa" + data + b"\x55")
         rospy.loginfo(f"Sent velocities -> v_left: {v_left}, v_right: {v_right}")
 
     def cleanup(self):

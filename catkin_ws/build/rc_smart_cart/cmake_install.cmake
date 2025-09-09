@@ -52,3 +52,11 @@ if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_
   file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/rc_smart_cart" TYPE FILE FILES "/home/cai/Dev/rc_smart_cart/catkin_ws/src/rc_smart_cart/package.xml")
 endif()
 
+if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/rc_smart_cart" TYPE PROGRAM FILES "/home/cai/Dev/rc_smart_cart/catkin_ws/build/rc_smart_cart/catkin_generated/installspace/motor_node.py")
+endif()
+
+if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/rc_smart_cart" TYPE PROGRAM FILES "/home/cai/Dev/rc_smart_cart/catkin_ws/build/rc_smart_cart/catkin_generated/installspace/odom_serial_node.py")
+endif()
+
