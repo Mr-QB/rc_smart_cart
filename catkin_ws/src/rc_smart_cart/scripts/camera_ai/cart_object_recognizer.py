@@ -1,8 +1,12 @@
 import cv2
 import numpy as np
+from bson.decimal128 import Decimal128
 import torch
 from pymongo import MongoClient
 import logging
+import threading
+import requests
+import time
 from transformers import AutoImageProcessor, AutoModel
 from ultralytics import FastSAM
 
@@ -21,11 +25,43 @@ class CartObjectRecognizer:
         self.dinov2_processor = AutoImageProcessor.from_pretrained(self.dinov2_model_name)
         self.dinov2_model = AutoModel.from_pretrained(self.dinov2_model_name).to("cuda")
         self.dinov2_model.eval()
-        self.threshold = 0.35
+        self.threshold = 0.42
 
         self.connect_db()
 
-    def connect_db(self, uri="mongodb://superAdmin:Matkhau123%40@localhost:27017/", db_name="cart_db", collection_name="embeddings"):
+        self.product_embeddings = []
+        self._stop_thread = False
+        self._thread = threading.Thread(target=self._update_embeddings_periodically, daemon=True)
+        self._thread.start()
+
+        self.label_sended = []
+    
+    def get_embedding_db(self):
+        product_embeddings = []
+        products = list(self.collection.find({}))
+        for prod in products:
+            name = prod['name']
+            embeddings = list(prod['embeddings'][0]) if 'embeddings' in prod and len(prod['embeddings']) > 0 else []
+            price = prod.get('price', 0)
+            id = prod.get('custom_id', 0)
+            product_embeddings.append({
+            "name": name,
+            "embeddings": embeddings,
+            "price": price,
+            "id": id,
+            "image": prod.get('org_images', "")[0]
+        })
+        return product_embeddings
+
+    def _update_embeddings_periodically(self):
+        while not self._stop_thread:
+            try:
+                self.product_embeddings = self.get_embedding_db()
+            except Exception as e:
+                logging.info(f"[ERROR] Updating embeddings failed: {e}")
+            time.sleep(10) 
+
+    def connect_db(self, uri="mongodb://superAdmin:Matkhau123%40@localhost:27017/", db_name="smartcartdb", collection_name="products_product"):
         try:
             self.client = MongoClient(uri)
             self.db = self.client[db_name]
@@ -52,20 +88,24 @@ class CartObjectRecognizer:
         return emb
 
     def verify_embedding(self, emb1, emb2):
-        print(emb1.shape, emb2.shape)
         similarity = (emb1 @ emb2.T).item()
         is_same = similarity >= self.threshold
         return similarity, is_same
     
-    def check_label(self, crop, reference_db):
+    def check_label(self, crop):
         products = list(self.collection.find({}))
         emb_crop = self.get_embedding(crop)
 
-        for prod in products:
-            emb_db = torch.tensor(prod['embedding'], dtype=torch.float32).to('cuda')
-            sim, is_same = self.verify_embedding(emb_crop, emb_db)
-            if is_same:
-                return prod['label'], sim
+        for prod in self.product_embeddings:
+            for emb_vec in prod['embeddings']:
+                emb_db = torch.tensor(emb_vec, dtype=torch.float32).to('cuda')
+                sim, is_same = self.verify_embedding(emb_crop, emb_db)
+                if is_same:
+                    return prod, sim
+            # emb_db = torch.tensor(prod['embedding'], dtype=torch.float32).to('cuda')
+            # sim, is_same = self.verify_embedding(emb_crop, emb_db)
+            # if is_same:
+            #     return prod['label'], sim
         return None, None
 
     def get_frame(self):
@@ -82,7 +122,7 @@ class CartObjectRecognizer:
             self.cap = None
     
     def run_fastsam_on_frame(self, frame):
-        results = self.fastsam_model.predict(frame,retina_masks=True, device="cuda",conf=0.7,iou=0.9)
+        results = self.fastsam_model.predict(frame,retina_masks=True, device="cuda",conf=0.8,iou=0.9)
         annotated_frame = results[0].plot()
         return annotated_frame, results
 
@@ -99,7 +139,7 @@ class CartObjectRecognizer:
         cropped = isolated[y1:y2, x1:x2]
         return cropped
 
-    def get_object_from_fast_sam(self, results):
+    def get_object_from_fast_sam(self,frame, results):
         objects = []
         bboxes, masks = self.get_bboxes_and_masks(results)
 
@@ -112,23 +152,43 @@ class CartObjectRecognizer:
 
     def check_project_name(self, objects, bboxs, image):
         for i, obj in enumerate(objects):
-            label, sim = self.check_label(obj, self.collection)
-            if label is not None:
+            prod, sim = self.check_label(obj)
+            if prod is not None:
+                self.sent_to_cart_monitor(prod['image'], prod['name'], price=  float(prod['price'].to_decimal()), id=(prod['id']), quantity=1)
                 x1, y1, x2, y2 = bboxs[i].astype(int)
-                cv2.putText(image, f"{label} {sim:.2f}", (x1, y1 - 10), cv2.FONT_HERSHEY_SIMPLEX, 0.9, (0, 255, 0), 2)
+                cv2.putText(image, f"{prod['name']} {sim:.2f}", (x1, y1 - 10), cv2.FONT_HERSHEY_SIMPLEX, 0.9, (0, 255, 0), 2)
                 cv2.rectangle(image, (x1, y1), (x2, y2), (0, 255, 0), 2)
+                return 
+            
+    
+    def sent_to_cart_monitor(self, image, label, price, id, quantity, api_endpoint="http://192.168.5.151:8000/carts/api/add_to_cart/"):
+        if id in self.label_sended:
+            return
+        self.label_sended.append(id)
+        product_data = {
+            "id": id,
+            "name": label,
+            "price": price,
+            "image":image,
+            "quantity": quantity
+        }
+        response = requests.post(api_endpoint, json=product_data)
+
+
 
 if __name__ == "__main__":
     camera = CartObjectRecognizer(camera_index=2)  # /dev/video2
     try:
         camera.start_camera()
         while True:
+            # print(len(camera.product_embeddings))
             frame = camera.get_frame()
             annotated_frame, results = camera.run_fastsam_on_frame(frame)
-            objects, bboxes, masks = camera.get_object_from_fast_sam(results)
+            objects, bboxes, masks = camera.get_object_from_fast_sam(frame, results)
             camera.check_project_name(objects, bboxes, frame)
 
             cv2.imshow("USB Camera", frame)
+            # cv2.imshow("Annotated", annotated_frame)
             if cv2.waitKey(1) & 0xFF == ord('q'):
                 break
     finally:
