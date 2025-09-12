@@ -24,10 +24,6 @@
 | rc_smart_cart_app                 | Flutter app for user interface and cart status monitoring  |
 | rc_smart_cart_backend_server      | Python backend handling data, product tracking, and control|
 
-## Development Status
-
-The project is currently under active development, focusing on key modules such as indoor navigation, device communication, and mobile interface. Integration and real-world testing are planned in upcoming phases.
-
 ## Contact
 
 For more information or collaboration, please contact **Team Chap Het**, participating in the **FPT IoT Challenge 2025**.
