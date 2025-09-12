@@ -1,5 +1,4 @@
 # RC Smart Cart – Intelligent Shopping Cart Robot  
-### Team: Chap Het – FPT IoT Challenge 2025
 
 **RC Smart Cart** is an autonomous shopping cart robot developed to enhance the shopping experience in supermarkets. The robot is capable of following users, navigating indoor environments, identifying and tracking products, and automatically handling billing when items are placed into the cart. The project integrates advanced technologies in computer vision, navigation, and automation.
 
